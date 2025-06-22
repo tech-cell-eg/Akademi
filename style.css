@@ -1,0 +1,33 @@
+body{
+    background-color : #f3f4ff;
+    height: 100vh;
+     font-family: 'Poppins', sans-serif;
+}
+h1{
+    
+    size: 36px;
+}
+.container{
+    padding: 50px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.search-bar{
+    width: 350px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 32px;
+    padding-left: 25px;
+    gap:16px;
+}
+.search-bar p{
+    size: 18px;
+    color: #A098AE;
+}
