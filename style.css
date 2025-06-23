@@ -3,9 +3,11 @@ body{
     height: 100vh;
      font-family: 'Poppins', sans-serif;
 }
+
 h1{
-    
-    size: 36px;
+    color: #303972;
+   font-size: 36px;
+    font-weight:700;
 }
 .container{
     padding: 50px;
@@ -13,6 +15,7 @@ h1{
 .header{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 .search-bar{
     width: 350px;
@@ -21,13 +24,342 @@ h1{
     align-items: center;
     background-color: #FFFFFF;
     border-radius: 40px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-right: 32px;
-    padding-left: 25px;
+    padding: 2px 32px;
     gap:16px;
+}
+.search-bar img {
+  display: block; 
+  width: 24px;
+  height: 24px;
 }
 .search-bar p{
     size: 18px;
     color: #A098AE;
 }
+.bell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;
+}
+.gear{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;  
+}
+.name span{
+  color: #303972;
+  font-weight: 600;
+  font-size: 16px;
+}
+.name p{
+    color:#A098AE;
+    size:14px;
+    font-weight: 400;
+}
+.profile-pic{
+     background-color: #C1BBEB;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;
+}
+.box1 .b1-img{
+    background-color: #4d44b5;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+.box1 p, .box2 p , .box3 p{
+    color: #A098AE;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    
+}
+.box1 h3 , .box2 h3 ,.box3 h3{
+    color: #303972;
+    font-weight: 700;
+    font-size: 36px;
+     margin-bottom: 10px;
+}
+.box1 span , .box3 span{
+    color: #4CBC9A;
+    font-size: 18px;
+    font-weight:500;
+}
+.box2 span{
+    color: #ff4550;
+    font-size: 18px;
+    font-weight:500;
+}
+.box1 , .box2{
+    width: 360px;
+    height: 172px;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    gap:30px;
+}
+.box2 .b2-img{
+    background-color: #FB7D5B;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+.box3 .b3-img{
+    background-color: #FCC43E;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+.box3{
+    width: 675px;
+    height: 172px;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    gap:32px;
+}
+.second-div{
+    display: flex;
+    gap: 40px;
+}
+.third-div{
+    background-color: #FFFFFF;
+    border-radius:20px ;
+    margin-top: 40px;
+    padding: 32px 44px;
+}
+.graph-data{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.graph-data h2{
+    color: #303972;
+    font-size: 24px;
+    font-weight: 700;
+}
+.numeric-data{
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+.expence span{
+    color:#A098AE;
+    font-size: 14px;
+    font-weight: 400;
+}
+.expence p{
+     color:#303972;
+    font-size: 18px;
+    font-weight: 600;
+}
+.income span{
+      color:#A098AE;
+    font-size: 14px;
+    font-weight: 400;
+}
+.income{
+       color:#303972;
+    font-size: 18px;
+    font-weight: 600;
+}
+button{
+    width: 207px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border: #4d44b5 2px solid ;
+    border-radius: 40px;
+    padding: 16px 43px 16px 43px;
+    color: #4d44b5;
+    gap:10px;
+}
+
+
+/*---------------*/
+.fourth-div{
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+}
+.unpaid-students{
+    width: 847px;
+    height: 725px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 32px;
+    
+}
+.unpaid-students h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #303972;
+}
+.stu1{
+    display: flex;
+    align-items: center;
+   margin-top: 28px;
+    margin-bottom: 28px;
+}
+.stu1 h4{
+    color: #303972;
+    font-size: 18px;
+    font-weight: 600;
+}
+.stu1 span{
+    color: #4d44b5;
+    font-size: 18px;
+    font-weight: 600;
+}
+.user{
+    display: flex;
+    gap:16px;
+}
+.u-img{
+     background-color: #FB7D5B;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+.user-data p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #A098AE;
+    margin-bottom: 2px;
+}
+/*-----------*/
+.no-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 41px;
+    padding-right: 32;
+}
+.showing-list p{
+  color: #A098AE;
+  font-size: 14px;
+  font-weight: 400;
+}
+.showing-list span{
+  color:#303972;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.numbers ul{
+    list-style: none;
+    display: flex;
+     gap:16px;
+}
+.numbers .arrow{
+     font-size: 20px;
+  color: #A098AE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+.numbers ul li:not(.arrow){
+
+  color: #A098AE;
+  width: 51px;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  border: 2px solid #A098AE;
+}
+.numbers ul li:not(.arrow):hover{
+    color: #FFFFFF;
+    background-color: #4d44b5;
+    border: 2px solid #4d44b5;
+}
+/*-----------------*/
+.school-expence{
+  width: 588px;
+    height:725px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 32px;
+}
+.school-expence h3{
+    color: #303972;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.s-img{
+     background-color: #ff4550;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+.status{
+    display: flex;
+    gap:55px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.f-status{
+    display: flex;
+    gap:16px;
+    align-items: center;
+}
+
+.status-data span{
+    color: #303972;
+    font-size: 18px;
+    font-weight: 600;
+}
+.status-data p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #A098AE;
+}
+.status h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: #303972;
+}
+.status h5{
+      font-size: 18px;
+    font-weight: 600;
+    color: #4CBC9A;
+}
+.no-data2{
+    display: flex;
+    gap:59px;
+    align-items: center;
+}
+
+

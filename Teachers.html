@@ -6,32 +6,295 @@
    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
    <link rel="stylesheet" href="style.css">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
     <title>Finance</title>
 </head>
 <body>
     <div  class="p-5">
       <div class="header ">
-        <div > <h1 class="text-#f3f4ff">Finance</h1></div>
+        <div > <h1>Finance</h1></div>
         <div  class="d-flex gap-3">
             <div class="search-bar"> 
-             <img src="image/Search.svg " width="32px" height="32px">
+             <img src="image/Search.svg " >
              <p>Search here...</p>
             </div>
 
-            <div >
+            <div class="bell">
                 <img src="image/bell.svg" width="32px" height="32px">
             </div>
-            <div >
+            <div class="gear">
                 <img src="image/gear.svg" width="32px" height="32px">
             </div>
-            <div>
+            <div class="name">
                 <span>Nabila A.</span>
                 <p>Admin</p>
             </div>
+            <div class="profile-pic"></div>
         </div>
       </div>
+      <div class="second-div">
+        <div class="box1" style="padding: 30px 32px;">
+        <div class="b1-img"> <img src="image/Student (1).svg"></div>
+        <div>
+            <p>Total Students</p>
+            <h3>932</h3>
+            <p><span>+10%</span> than last month</p>
+        </div>
+        </div>
+         <div class="box2" style="padding: 30px 24px 30px 32px;">
+        <div class="b2-img"> <img src="image/Teacher.svg"></div>
+        <div>
+            <p>Total Teachers</p>
+            <h3>754</h3>
+            <p><span>-0,5%</span> than last month</p>
+        </div>
+        </div>
+        <div class="box3" style="padding: 30px 24px 30px 32px;">
+        <div class="b3-img"> <img src="image/Finance.svg"></div>
+        <div>
+            <p>School Balance</p>
+            <h3>$123,456</h3>
+            <p><span>+23%</span> than last month</p>
+        </div>
+        <div  > <img src="image/Graph (1).png " width="281" height="83"></div>
+        </div>
+
+      </div>
+      <div class="third-div">
+           <div class="graph-data">
+            <div><h2>Balance Analytics</h2></div>
+            <div class="numeric-data">
+              <div class="expence">
+                <span><i class="far fa-circle" style="color:#FCC43E;"></i>Expense</span>
+                <p>1.245</p>
+              </div>
+              <div class="income">
+               <span><i class="far fa-circle" style="color:#FB7D5B;"></i> Income</span>
+                <p>1.356</p>
+              </div>
+              <button>More <i class="fas fa-caret-down"></i></button>
+            </div>
+            </div>
+            <div class="graph-draw">
+                <canvas id="myChart"></canvas>
+            </div>
+      </div>
+      <div class="fourth-div">
+        <div class="unpaid-students">
+            <div><h3>Unpaid Student Intuition</h3></div>
+            <div class="list-names">
+              <div class="stu1">
+                <div class="profile-pic" style="margin-right: 24px;"></div>
+                <h4 >Samantha W.</h4>
+                <span style="margin-left: 54px;">ID 123456789</span>
+                <div class="user" style="margin-left: 67px;">
+                    <div class="u-img"><img src="image/User.svg"></div>
+                    <div class="user-data">
+                        <p>class</p>
+                        <span>VII A</span>
+                    </div>
+                </div>
+                <h4 style="margin-left: 67px;">$ 50,036</h4>
+                <div style="margin-left: 67px;"><img src="image/menu.svg"></div>
+              </div>
+               <div class="stu1">
+                <div class="profile-pic" style="margin-right: 24px;"></div>
+                <h4 >Tony Soap</h4>
+                <span style="margin-left: 82px;">ID 123456789</span>
+                <div class="user" style="margin-left: 67px;">
+                    <div class="u-img"><img src="image/User.svg"></div>
+                    <div class="user-data">
+                        <p>class</p>
+                        <span>VII A</span>
+                    </div>
+                </div>
+                <h4 style="margin-left: 67px;">$ 50,036</h4>
+                <div style="margin-left: 67px;"><img src="image/menu.svg"></div>
+              </div>
+               <div class="stu1">
+                <div class="profile-pic" style="margin-right: 24px;"></div>
+                <h4 >Jordan Nico</h4>
+                <span style="margin-left: 67px;">ID 123456789</span>
+                <div class="user" style="margin-left: 67px;">
+                    <div class="u-img"><img src="image/User.svg"></div>
+                    <div class="user-data">
+                        <p>class</p>
+                        <span>VII A</span>
+                    </div>
+                </div>
+                <h4 style="margin-left: 67px;">$ 50,036</h4>
+                <div style="margin-left: 67px;"><img src="image/menu.svg"></div>
+              </div>
+               <div class="stu1">
+                <div class="profile-pic" style="margin-right: 24px;"></div>
+                <h4 >Karen Hope</h4>
+                <span style="margin-left: 67px;">ID 123456789</span>
+                <div class="user" style="margin-left: 67px;">
+                    <div class="u-img"><img src="image/User.svg"></div>
+                    <div class="user-data">
+                        <p>class</p>
+                        <span>VII A</span>
+                    </div>
+                </div>
+                <h4 style="margin-left: 67px;">$ 50,036</h4>
+                <div style="margin-left: 67px;"><img src="image/menu.svg"></div>
+              </div> 
+              <div class="stu1">
+                <div class="profile-pic" style="margin-right: 24px;"></div>
+                <h4 >Nadila Adja</h4>
+                <span style="margin-left: 71px;">ID 123456789</span>
+                <div class="user" style="margin-left: 67px;">
+                    <div class="u-img"><img src="image/User.svg"></div>
+                    <div class="user-data">
+                        <p>class</p>
+                        <span>VII A</span>
+                    </div>
+                </div>
+                <h4 style="margin-left: 67px;">$ 50,036</h4>
+                <div style="margin-left: 67px;"><img src="image/menu.svg"></div>
+              </div>
+
+            </div>
+            <div class="no-data">
+                <div class="showing-list">
+                    <p>Showing <span> 1-5 </span> from <span>100 </span> data</p>
+                </div>
+                <div class="numbers">
+                   <ul>
+                     <li class="arrow"><i class=" fas fa-caret-left"></i></li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li class="arrow"><i class="fas fa-caret-right"></i></li>
+                   </ul>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="school-expence">
+            <div><h3>School Expense</h3></div>
+            <div class="status" >
+                <div class="f-status">
+                    <div class="s-img"><img src="image/trending.svg"></div>
+                    <div class="status-data">
+                        <span>#123456789</span>
+                        <p>2 March 2021, 13:45 PM</p>
+                    </div>
+                    </div>
+                     <h4>$ 50,036</h4>
+                     <h5>Complete</h5>
+                </div>
+                <div class="status" >
+                <div class="f-status">
+                    <div class="s-img"><img src="image/trending.svg"></div>
+                    <div class="status-data">
+                        <span>#123456789</span>
+                        <p>2 March 2021, 13:45 PM</p>
+                    </div>
+                    </div>
+                     <h4>$ 50,036</h4>
+                     <h5 style="color: #A098AE;">Pending</h5>
+                </div>
+                <div class="status" >
+                <div class="f-status">
+                    <div class="s-img"><img src="image/trending.svg"></div>
+                    <div class="status-data">
+                        <span>#123456789</span>
+                        <p>2 March 2021, 13:45 PM</p>
+                    </div>
+                    </div>
+                     <h4>$ 50,036</h4>
+                     <h5 style="color: #FF4550;">Canceled</h5>
+                </div>
+                <div class="status" >
+                <div class="f-status">
+                    <div class="s-img"><img src="image/trending.svg"></div>
+                    <div class="status-data">
+                        <span>#123456789</span>
+                        <p>2 March 2021, 13:45 PM</p>
+                    </div>
+                    </div>
+                     <h4>$ 50,036</h4>
+                     <h5>Complete</h5>
+                </div>
+                <div class="status" >
+                <div class="f-status">
+                    <div class="s-img"><img src="image/trending.svg"></div>
+                    <div class="status-data">
+                        <span>#123456789</span>
+                        <p>2 March 2021, 13:45 PM</p>
+                    </div>
+                    </div>
+                     <h4>$ 50,036</h4>
+                     <h5>Complete</h5>
+                </div>
+                <div class="status" >
+                <div class="f-status">
+                    <div class="s-img"><img src="image/trending.svg"></div>
+                    <div class="status-data">
+                        <span>#123456789</span>
+                        <p>2 March 2021, 13:45 PM</p>
+                    </div>
+                    </div>
+                     <h4>$ 50,036</h4>
+                     <h5>Complete</h5>
+                </div>
+            <div class="no-data2">
+                <div class="showing-list">
+                    <p>Showing <span> 1-5 </span> from <span>100 </span> data</p>
+                </div>
+                <div class="numbers">
+                   <ul>
+                     <li class="arrow"><i class=" fas fa-caret-left"></i></li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li class="arrow"><i class="fas fa-caret-right"></i></li>
+                   </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+      </div>
     </div>
+     <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+
+    const myChart = new Chart(ctx, {
+      type: 'line', 
+      data: {
+        labels: [
+          "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct","Nov", "Dec"
+        ],
+        datasets: [{
+          label: 'نسبة الإنجاز',
+          data: [10, 20, 30, 45, 50, 60, 65, 75, 85, 90, 95, 100],
+          fill: false,
+          borderColor: '#FB7D5B',
+          tension: 0.4, 
+          pointBackgroundColor: '#4d44b5',
+          pointRadius: 5
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: {
+              stepSize: 25
+            }
+          }
+        }
+      }
+    });
+  </script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 
