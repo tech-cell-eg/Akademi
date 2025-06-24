@@ -13,19 +13,25 @@
 }
 input:focus {
   outline: none;
-  box-shadow: none;}
+  box-shadow: none;
+}
 
 :root {
   --main-color: #4d44b5;
   --main-background-color: #f3f4ff;
   --secondary-color: #fb7d5b;
   --grey-color: #a098ae;
-  
-
-
-
 }
-body{overflow-x:hidden}
+body {
+  overflow-x: hidden;
+}
+h1{font-weight: 700;}
+h2,
+h3 {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
 /**************************side bar********************************/
 
 #icon-span {
@@ -36,7 +42,6 @@ body{overflow-x:hidden}
   border-radius: 16px;
 }
 h1 {
-  font-weight: 700;
   font-size: 36px;
   text-align: center;
   white-space: nowrap;
@@ -60,7 +65,9 @@ aside svg {
 
 .active {
   color: var(--main-color);
+  font-weight: 700;
 }
+.active svg path{fill:var(--main-color) !important}
 .active::after {
   content: "";
   display: inline-block;
@@ -79,7 +86,7 @@ aside svg {
   padding-bottom: 16px;
   padding-left: 24px;
 }
-
+li{cursor:pointer}
 /**************************************view****************************/
 
 .myview {
@@ -117,99 +124,102 @@ input::placeholder {
   color: var(--grey-color);
 }
 /***************num bar*********************/
-.num-bar{
-    width:90%;
-   
-    background-color: white;
-    border-radius: 20px;
-    padding-block:20px;
-    text-align:center
-}
-.num-card{
-width:25%;
-height: 65px;
+.num-bar {
+  width: 90%;
 
+  background-color: white;
+  border-radius: 20px;
+  padding-block: 20px;
+  text-align: center;
 }
-.num-icon{width:9vh;
-height:9vh;
-border-radius: 50%;
-text-align: center;
-padding-top: 10px;
+.num-card {
+  width: 25%;
+  height: 65px;
+}
+.num-icon {
+  width: 9vh;
+  height: 9vh;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 10px;
 
-vertical-align: top;
-display:inline-block;
+  vertical-align: top;
+  display: inline-block;
 }
-.num-icon svg {color: white !important;
-width:85%;
-height:85%
+.num-icon svg {
+  color: white !important;
+  width: 85%;
+  height: 85%;
 }
-.text-num{display: inline-block;
+.text-num {
+  display: inline-block;
   color: var(--main-color);
-  
-
 }
-.st-num{background: var(--main-color);
-
+.st-num {
+  background: var(--main-color);
 }
-.te-num{background-color: var(--secondary-color);}
-.e-num{background-color: rgba(252, 196, 62, 1);}
-.f{background-color: rgba(48, 57, 114, 1);}
-.text-num p{font-size: 13px;
-font-weight: 300;}
-.text-num span{
-font-weight: 700;
-font-size: 25px;
-
+.te-num {
+  background-color: var(--secondary-color);
 }
-
+.e-num {
+  background-color: rgba(252, 196, 62, 1);
+}
+.f {
+  background-color: rgba(48, 57, 114, 1);
+}
+.text-num p {
+  font-size: 13px;
+  font-weight: 300;
+}
+.text-num span {
+  font-weight: 700;
+  font-size: 25px;
+}
 
 /**********chart section************/
-.chart-one{
-  width:90%;
+.chart-one {
+  width: 90%;
   height: 300px;
 
   border-radius: 20px;
-  margin:auto;
-  margin-top:40px
+  margin: auto;
+  margin-top: 40px;
 }
-.cal-fin{width:90%;
-margin-inline: auto;
-margin-block: 40px;
+.cal-fin {
+  width: 90%;
+  margin-inline: auto;
+  margin-block: 40px;
 }
 .finance {
-    display: inline-block;
-   width:48%;
-   height:300px;
-   background-color: white;
+  display: inline-block;
+  width: 45%;
+  height: 333px;
+  background-color: white;
   border-radius: 20px;
-
-  
 }
 .calendar_parent {
-      width:48%;
-     
-      height: 300px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      padding: 20px;
-      
-    }
-
+  width: 53%;
+  height: 333px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 5px;
+  overflow: hidden;
+}
 #calendar {
-  width: 100%;
-  height: 100%;
+  width: 102%;
+  height: 90%;
   padding: 0 !important;
+  padding-right: 20%;
 }
-
-/* العنوان */
+/*title*/
 .fc .fc-toolbar-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(48, 57, 114, 1);
 }
 
-/* أزرار التنقل */
+/*buttons*/
 .fc .fc-button {
   background-color: #5e3ef7;
   border: none;
@@ -221,22 +231,28 @@ margin-block: 40px;
 .fc .fc-button:hover {
   background-color: #4a2edb;
 }
+.fc .fc-button-group {
+  right: 40px;
+  display: inline-flex;
+  position: relative;
+  vertical-align: middle;
+}
 
-/* رقم اليوم */
+/* days*/
 .fc .fc-daygrid-day-number {
+  text-align: center;
   font-weight: 500;
   font-size: 10px !important;
   color: #555;
-  padding: 2px !important;
+  text-decoration: none;
 }
 
-/* محتوى اليوم */
 .fc .fc-daygrid-day-frame {
-  min-height: 25px !important;
+  height: 10px !important;
   padding: 1px !important;
 }
 
-/* الحدث */
+/* event */
 .fc .fc-event {
   border: none;
   font-size: 9px !important;
@@ -245,13 +261,12 @@ margin-block: 40px;
   margin-top: 2px !important;
 }
 
-/* ألوان الأحداث */
 .fc-event-important {
-  background-color: #5e3ef7;
+  background-color: #4df73e;
   color: white;
 }
 .fc-event-exam {
-  background-color: #ff8364;
+  background-color: #646eff;
   color: white;
 }
 .fc-event-holiday {
@@ -259,12 +274,10 @@ margin-block: 40px;
   color: #333;
 }
 
-/* تصغير صف الأسبوع */
 .fc .fc-daygrid-row {
-  min-height: 30px !important;
+  height: 20px !important;
 }
 
-/* إلغاء أي Scroll داخلي */
 .fc .fc-scroller,
 .fc .fc-scrollgrid,
 .fc .fc-daygrid-body,
@@ -272,39 +285,249 @@ margin-block: 40px;
   overflow: hidden !important;
   max-height: none !important;
 }
-canvas{
-    background: white;
-    box-sizing: border-box;
-    height: 100% !important;
-    width: 100% !important;
-    padding:30px;
-    border-radius: 20px;
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: 0.5px solid rgba(128, 128, 128, 0.418);
 }
-#unpaid{
-  width:90%;
+.fc .fc-col-header-cell-cushion {
+  text-decoration: none;
+  color: var(--grey-color);
+  font-size: 13px;
+  font-weight: 300;
+}
+.fc .fc-scroller,
+.fc .fc-scrollgrid,
+.fc .fc-daygrid-body,
+.fc .fc-daygrid-body-natural {
+  border: 0px;
+}
+
+/******************************************/
+canvas {
+  background: white;
+  box-sizing: border-box;
+  height: 100% !important;
+  width: 100% !important;
+  padding: 30px;
+  border-radius: 20px;
+}
+#unpaid {
+  width: 90%;
   height: 300px;
   border-radius: 20px;
-  margin:auto;
-  margin-top:40px
+  margin: auto;
+  margin-top: 40px;
 }
- 
+
 /******************table*****************/
-#unpaid{width:90%;
-background-color: white;
-border-radius: 20px;
-margin: auto;
+.grid-container {
+  width: 90%;
+  height: 55vh;
+  background-color: white;
+  border-radius: 20px;
+  margin: auto;
+  padding: 40px;
+  position: relative;
 }
-td{padding-block: 7px;}
-.table-icon{width:3vw;
-height: 3vw;
-border-radius: 50%;
-background-color: rgba(193, 187, 235, 1);
-margin-block: auto;}
-#students-table{width:90%;
-margin: auto;
-background-color: white;}
-/****inner side****/
+#unpaid {
+  width: 90%;
+  margin: auto;
+  height: 50vh;
+}
+td {
+  padding-block: 7px;
+}
+.table-icon {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  background-color: rgba(193, 187, 235, 1);
+  margin-block: auto;
+}
+#students-table {
+  font-weight: 300;
+  font-size: 14px;
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  position: relative;
+}
+
+#students-table tr:hover {
+  background-color: #f9f9f9;
+}
+#pagination {
+  position: absolute;
+  bottom: 0%;
+  right: 10%;
+}
+.page-btn {
+  padding: 8px 16px;
+  margin: 5px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 3vw;
+  height: 3vw;
+}
+
+.page-btn:hover {
+  background-color: #ccc;
+}
+
+.page-btn.active {
+  background-color: #5e3ef7;
+  color: white;
+}
+/***************************inner side***********************************/
 .dashboard-inner-side {
   width: 20vw;
   height: 100vh;
+  padding: 10px;
+}
+/******************************teacher*******************************************/
+
+.teacher_card{width:20%;
+  height:50vh;
+background-color: white;
+border-radius: 20px;
+text-align: center;
+padding-top :40px;
+margin:20px;
+display: inline-block;}
+
+.teacher_h2,h2{margin:25px;
+
+}
+.teacher_icon{width:50px;
+height:50px;
+border-radius: 50%;
+background-color: var(--main-color);
+margin-inline: auto;
+margin-block: 20px
+}
+.teachers-list-container{width:90%
+  ;
+  display: block;
+margin: auto;
+
+height:310vh
+;margin-bottom: 20px;
+}
+
+
+.teacher-icons svg{padding:5px;
+background-color: var(--main-color);
+border-radius: 50%;
+width:30px
+;height: 30px;
+}
+
+
+.teacher-field{color: var(--grey-color);
+
+font-size: 14px;
+font-weight: 200;}
+.teacher-name,.food-name {
+    font-size: 16px;
+    color: var(--main-color);
+    font-weight: 600;
+}
+.t-pagination {
+    position: absolute;
+    bottom: 4%;
+    right: 14%;
+    text-align: center;
+  
+}
+.t-pagination .page-btn {
+  
+  padding: 8px 16px;
+  margin: 5px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 3vw;
+  height: 3vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+}
+
+.t-pagination .page-btn:hover {
+  background-color: #ccc;
+}
+
+.t-pagination .page-btn.active {
+  background-color: #5e3ef7;
+  color: white;
+}
+/****************************************************/
+.f-pagination {
+    position: absolute;
+    bottom: 4%;
+    right: 14%;
+    text-align: center;
+  
+}
+.f-pagination .page-btn {
+  
+  padding: 8px 16px;
+  margin: 5px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 3vw;
+  height: 3vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+}
+
+.f-pagination .page-btn:hover {
+  background-color: #ccc;
+}
+
+.f-pagination .page-btn.active {
+  background-color: #5e3ef7;
+  color: white;
+}
+.food-row {
+    margin-block: 22px;
+    display: flex;
+    width: 90%;
+    margin-inline: auto;
+    justify-content: space-between;
+}
+.food-icon{
+    background-color:var(--main-color);
+    width: 12%;
+    height: 94px;
+    border-radius: 20px;
+}
+.search-section{
+  margin-block: 20px;
+  margin-inline: 30px;
+}
+.food-name{width:35%;text-align: center;padding-top: 2vw;}
+.food-rating{width:25%;
+text-align: center; padding-top: 2vw;}
+.food-percent {
+    padding: 2vw;
+    height: 7vw;
+    width: 7vw;
+    text-align: center;
+    border: 2px var(--main-color) solid;
+    border-radius: 50%;
 }
