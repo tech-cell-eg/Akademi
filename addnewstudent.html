@@ -26,18 +26,116 @@
             </div>
         </div>
         <div class="student-details">
+            <div class="div-title">
+                <h3>Student Details</h3>
+            </div>
             <form class="form">
-             <div class="photo">
+                
+            <div class="photo">
                 <label for="imageUpload" class="upload-label"> Photo *
-                <input type="file" name="image">
+                <input type="file" name="image" style="width: 100px; height: 100px;">
              </div>
-             <div class="f-part">
-                <label> First Name *</label>
-                <input  type="text"  placeholder="Samantha">
+             <div class="f-part"> 
+               <div class="form-group">
+                       <label>First Name *</label>
+                       <input type="text" placeholder="Samantha">
+                     </div>
+
+                      <div class="form-group">
+                           <label>Date & Place of Birth *</label>
+                           <div class="flex-inputs">
+                             <input type="text" placeholder="24 February 1997" style="width: 276.5px;">
+                             <input type="text" placeholder="Jakarta"  style="width: 276.5px;" >
+                           </div>
+                         </div>
+                          <div class="form-group" style="display: flex; flex-direction: column;">
+                        <label>Email *</label>
+                        <input type="email" placeholder="william@gmail.com">
+                          </div>
+                          <div class="form-group full-width" style="display: flex; flex-direction: column;">
+                     <label>Address *</label>
+                     <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " style="height: 203px;"></textarea>
+               </div>
+             </div>
+             <div class="s-part">
+                     <div class="form-group">
+                       <label>Last Name *</label>
+                        <input type="text" placeholder="William">
+                     </div>
+                     <div class="form-group" style="display: flex; flex-direction: column;">
+                        <label>Parent Name *</label>
+                         <input type="text" placeholder="Mama William">
+                    </div>
+                     <div class="form-group" style="display: flex; flex-direction: column;" >
+                 <label>Phone *</label>
+                 <input type="text" placeholder="+1234567890">
+               </div>
+             </div>
+             </form>
+                </div>
+           
+         <div class="Parent-Details">
+            <div class="div-title">
+                <h3>Parent Details</h3>
+            </div>
+            <form class="form">
+             <div class="f-part"> 
+               <div class="form-group" style="display: flex; flex-direction: column;">
+                       <label>First Name *</label>
+                       <input type="text" placeholder="Samantha">
+                     </div>
+                    <div class="form-group" style="display: flex; flex-direction: column;">
+                        <label>Email *</label>
+                        <input type="email" placeholder="william@gmail.com">
+                          </div>
+                          <div class="form-group full-width" style="display: flex; flex-direction: column;">
+                     <label>Address *</label>
+                     <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " style="height: 203px;"></textarea>
+               </div>
+             </div>
+             <div class="s-part">
+                     <div class="form-group">
+                       <label>Last Name *</label>
+                        <input type="text" placeholder="William" style="display: flex; flex-direction: column;">
+                     </div>
+                     <div class="form-group" style="display: flex; flex-direction: column;" >
+                 <label>Phone *</label>
+                 <input type="text" placeholder="+1234567890">
+               </div>
+            <div class="form-group">
+               <p style="color: #303972; font-size: 18px; font-weight: 600;">Payment</p>
+                 <div style="display: flex; ">
+                         <div class="radio-option">
+              <input type="radio" 
+               id="Cash" 
+               name="Payment" 
+               value="Cash">
+              <label for="Cash" style="color: #A098AE; font-size: 14px; font-weight: 400;">Cash</label>
+            </div>
+
+             <div class="radio-option">
+            <input type="radio" 
+               id="Debit" 
+               name="Payment" 
+               value="Debit">
+            <label for="Debit" style="color: #A098AE; font-size: 14px; font-weight: 400;">Debit</label>
+            </div>
+                 </div>
+
              </div>
 
-            </form>
-        </div>
-    </div>
+             </div>
+             </form>
+                </div>
+             
+    </div>                                  
+               
+             
+
+            
+        
+    
 </body>
 </html>
