@@ -72,7 +72,6 @@ body{
   width: calc(100% - 458px); 
 }
 .top-div {
-    border: 1px  solid #303972;
     height: 400px;
     width: 100%;
   position: relative; 
@@ -83,7 +82,8 @@ body{
 }
 
 .top-img {
-  border: 1px  solid #303972;
+  scale: 1.2;
+  top: -3%;
   position: absolute;
   width: 100%;
   height: auto;
@@ -92,9 +92,9 @@ body{
 }
 .profile-pic-stu{
     position: absolute;
-    top:182px;
-    left: 427px;
-    border: #FFFFFF;
+    top:32px;
+    left: 32px;
+    border: 7px solid #FFFFFF;
     background-color: #C1BBEB;
     border-radius: 100px;
     width: 200px;
@@ -159,11 +159,7 @@ body{
     flex-direction: column;
     gap:15px
 }
-.top-div{
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    flex: 1;
-}
+
 .down-div{
     background-color: #FFFFFF;
     border-radius: 20px;
