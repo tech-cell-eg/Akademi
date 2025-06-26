@@ -72,7 +72,7 @@ body{
   width: calc(100% - 458px); 
 }
 .top-div {
-    height: 400px;
+    
     width: 100%;
   position: relative; 
   background-color: #FFFFFF;
@@ -100,7 +100,52 @@ body{
     width: 200px;
     height: 200px;
 }
-
+.stu-data{
+    padding-left: 32px ;
+    padding-right: 32px ;
+    margin-top: 270px;
+}
+.stu-name h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #303972;
+    margin-bottom: 16px;
+}
+.stu-name span{
+    font-size: 18px;
+    font-weight: 600;
+    color: #A098AE;
+}
+.data-l{
+    margin-top: 36px;
+    display: flex;
+    gap: 57px;
+}
+.data .d-1 span{
+   color: #A098AE;
+   font-weight: 400;
+   font-size: 18px;
+}
+.info{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.info .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FB7D5B;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+.info h5{
+    color: #303972;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
 
 .right-div {
  
@@ -182,7 +227,7 @@ body{
 }
 .status{
     display: flex;
-    gap:90px;
+    gap:120px;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -250,6 +295,72 @@ body{
     color: #FFFFFF;
     background-color: #4d44b5;
     border: 2px solid #4d44b5;
+}
+
+@media (max-width: 768px) {
+  .first-div {
+    justify-content: center;
+    flex-direction: column;
+    align-items:center; 
+    gap: 10px;
+  }
+
+  .notifications {
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    gap: 16px;
+  }
+
+  .bell,
+  .gear,
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+  }
+
+  .first-div h1 {
+    font-size: 25px;
+    text-align: left;
+  }
+  .second-div{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+    margin-bottom: 40px;
+}
+.search-bar p{
+    size: 18px;
+    color: #A098AE;
+}
+.search-bar{
+    width: 350px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color:#FFFFFF;
+    border-radius: 40px;
+    padding: 2px 32px;
+    gap:16px;
+}
+.gr-divs{
+    flex-direction: column;
+}
+.right-div .box1 , .box2{
+    width: 300px;
+    
+}
+.down-div{
+    white-space: nowrap;
+    overflow:auto;
+    width: 390px;
+    justify-content: center;
+}
+
+.status{
+    gap:80px;
+}
 }
 
 

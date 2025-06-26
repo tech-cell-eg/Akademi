@@ -1,0 +1,258 @@
+body{
+    background-color : #f3f4ff;
+    height: 100vh;
+     font-family: 'Poppins', sans-serif;
+}
+.container-chat{
+    padding: 50px !important
+}
+.first-div {
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.first-div h1{
+    font-size: 36px;
+    font-weight: 700;
+    color:#303972;
+}
+.header-left-side{
+    display: flex;
+    gap: 64px;
+}
+.notifications{
+     display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.bell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;
+}
+.gear{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;  
+}
+.name span{
+  color: #303972;
+  font-weight: 600;
+  font-size: 16px;
+}
+.name p{
+    color:#A098AE;
+    size:14px;
+    font-weight: 400;
+}
+.profile-pic{
+    background-color: #C1BBEB;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;
+}
+.search-bar p{
+    size: 18px;
+    color: #A098AE;
+}
+.search-bar{
+    width: 350px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color:#FFFFFF;
+    border-radius: 40px;
+    padding: 2px 32px;
+    gap:16px;
+}
+.chat-box{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+
+}
+.chat-box-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 507px;
+     padding: 32px;
+     border-right:1px solid #C1BBEB;
+}
+.class-history{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #C1BBEB;
+    padding-bottom: 22px;
+    width: 100%;
+}
+.class-right{
+    display: flex;
+    align-items: center; 
+    gap:16px;
+}
+.class-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.g-name {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px; 
+}
+.g-name h4{
+    color: #303972;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+.g-name span{
+    color: #A098AE;
+    font-size: 16px;
+    font-weight: 400;
+
+
+}
+.chat-box-right{
+   width:100%;
+   max-width: 968px; 
+    box-sizing: border-box;
+}
+.online {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.status-indicator {
+  width: 16px;
+  height: 16px;
+  background-color: #4CBC9A; 
+  border-radius: 40px;
+}
+.upper-chat{
+    display: flex;
+    align-items: center;
+    gap: 472px;
+     border-bottom: 1px solid #C1BBEB;
+     padding: 32px;
+}
+.upper-chat-left{
+     display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.upper-chat-right{
+     display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.middle-chat{
+    padding-top: 32px;
+    display: flex;
+
+}
+.w-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 22px 10px 22px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    color: #303972;
+    font-weight: 400;
+    font-size: 18px;
+}
+.w-msg-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 22px 10px 22px;
+    background-color: #4D44B5;
+    border-radius: 20px;
+    color:#FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+}
+.msg-box{
+    display: flex;
+    align-items: center;
+    padding: 15px 5px 15px 33px;
+    justify-content: space-between;
+    border:  2px solid #A098AE;
+    border-radius: 50px;
+}
+.last-chat{
+    margin-top: 308px;
+    padding: 32px 33px 32px 33px;
+    border-top: solid 1px #C1BBEB;
+}
+@media (max-width: 1024px) {
+  .first-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-left-side {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .chat-box {
+    flex-direction: column;
+  }
+
+  .chat-box-left,
+  .chat-box-right {
+    width: 100%;
+    border-right: none;
+    padding: 20px;
+  }
+
+  .upper-chat {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .upper-chat-right {
+    justify-content: flex-start;
+  }
+
+  .middle-chat {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .m-left,
+  .m-right {
+    margin-top: 0 !important;
+    align-items: flex-start !important;
+  }
+
+  .last-chat {
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .search-bar {
+    width: 100% !important;
+  }
+}
+
+
+
