@@ -1,34 +1,29 @@
-/***************global variables********************/
-var unpaid_grid = document.getElementById("unpaid");
-var teachers_list_container = document.getElementById(
-  "teachers-list-container"
-);
+/***************global variables********************/ 
+var unpaid_grid= document.getElementById("unpaid");
+var teachers_list_container= document.getElementById("teachers-list-container");
 
-let view = document.getElementById("myview");
-let student_li = document.getElementById("student");
-let teacher_li = document.getElementById("teacher");
-let event_li = document.getElementById("event");
-let finance_li = document.getElementById("finance");
-let food_li = document.getElementById("food");
-let user_li = document.getElementById("user");
-let chat_li = document.getElementById("chat");
-let l_activity_li = document.getElementById("dashboard");
-let dashboard_li = document.getElementById("dashboard");
+let view=document.getElementById("myview");
+let student_li=document.getElementById('student');
+let teacher_li=document.getElementById('teacher');
+let event_li=document.getElementById('event');
+let finance_li=document.getElementById('finance');
+let food_li=document.getElementById('food');
+let user_li=document.getElementById('user');
+let chat_li=document.getElementById('chat');
+let l_activity_li=document.getElementById('dashboard');
+let dashboard_li=document.getElementById('dashboard');
 /***************************************view ingection************************************************** */
-
+/**making dashboard default */
 /***************************html**************************** */
 /**dashboard */
-let dashboard_html = `
+let dashboard_html=`
 <div class="d-flex">
 
  <!------------------------dashboard--------------------------->
 
-
+       
           <section class="dashboard  "> 
              <h2 class="d-inline-block">Dashboard</h2>
-          
-
-
     <div class="search-section float-end bg-white">
            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M23.6 21.8L18 16.2C19.3 14.5 20.1 12.4 20.1 10.1C20.1 4.60001 15.6 0.100006 10.1 0.100006C4.6 0.100006 0 4.60001 0 10.1C0 15.6 4.5 20.1 10 20.1C12.3 20.1 14.5 19.3 16.2 17.9L21.8 23.5C22 23.7 22.4 23.9 22.7 23.9C23 23.9 23.3 23.8 23.6 23.5C24.1 23.1 24.1 22.3 23.6 21.8ZM2.5 10.1C2.5 6.00001 5.9 2.60001 10 2.60001C14.1 2.60001 17.5 6.00001 17.5 10.1C17.5 14.2 14.1 17.6 10 17.6C5.9 17.6 2.5 14.3 2.5 10.1Z" fill="#4D44B5"/>
@@ -36,7 +31,6 @@ let dashboard_html = `
        <input class=" " type="text" name="search " id="search" placeholder="search here...">
 
     </div>
-      
 
     <!------------------------num bar--------------------------->
             <div class="num-bar m-auto d-flex align-items-center ">
@@ -179,35 +173,15 @@ let dashboard_html = `
 </div>
 </section>
 <!-- side      -->
-   
+          <div class="dashboard-inner-side bg-white ">
+         <div class="header">
+
+         </div>
 
 
 
 
-<div class="dashboard-inner-side">
-                     <div class="buttons d-inline ">
-<button > <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10.2631 0.666672L9.41671 4.46615C8.93534 4.69779 8.47519 4.96458 8.03389 5.26563L4.32035 4.09636L0.583374 10.5703L3.39848 13.1484C3.28849 13.9648 3.33831 14.3672 3.39848 14.8516L0.583374 17.4297L4.32035 23.9037L8.03389 22.7344C8.47519 23.0354 8.93534 23.3022 9.41671 23.5339L10.2631 27.3333H17.737L18.5834 23.5339C19.0647 23.3022 19.5249 23.0354 19.9662 22.7344L23.6797 23.9037L27.4167 17.4297L24.6016 14.8516C24.6246 14.5682 24.6664 14.2845 24.6667 14C24.6678 13.7069 24.6216 13.4108 24.6016 13.1484L27.4167 10.5703L23.6797 4.09636L19.9662 5.26563C19.5249 4.96458 19.0647 4.69779 18.5834 4.46615L17.737 0.666672H10.2631ZM12.4037 3.33334H15.5964L16.2552 6.29167L16.9167 6.55209C17.6649 6.84512 18.3644 7.24846 18.9922 7.75001L19.5495 8.19271L22.4401 7.28386L24.0365 10.0495L21.8021 12.099L21.9089 12.8021C22.0346 13.5797 22.0101 14.4746 21.9089 15.1979L21.8021 15.901L24.0365 17.9505L22.4401 20.7162L19.5495 19.8073L18.9922 20.25C18.3644 20.7516 17.6649 21.1549 16.9167 21.4479L16.2552 21.7083L15.5964 24.6667H12.4037L11.7448 21.7083L11.0834 21.4479C10.3351 21.1549 9.63569 20.7516 9.00785 20.25L8.45056 19.8073L5.55994 20.7162L3.96358 17.9505L6.19796 15.901L6.09119 15.1979C5.96095 14.4046 5.98095 13.4967 6.09119 12.8021L6.19796 12.099L3.96358 10.0495L5.55994 7.28386L8.45056 8.19271L9.00785 7.75001C9.63569 7.24846 10.3351 6.84512 11.0834 6.55209L11.7448 6.29167L12.4037 3.33334ZM14 8.66667C11.0703 8.66667 8.66671 11.0703 8.66671 14C8.66671 16.9297 11.0703 19.3333 14 19.3333C16.9298 19.3333 19.3334 16.9297 19.3334 14C19.3334 11.0703 16.9298 8.66667 14 8.66667ZM14 11.3333C15.4886 11.3333 16.6667 12.5115 16.6667 14C16.6667 15.4886 15.4886 16.6667 14 16.6667C12.5115 16.6667 11.3334 15.4886 11.3334 14C11.3334 12.5115 12.5115 11.3333 14 11.3333Z" fill="#A098AE"/>
-</svg>
-
-</button>
-                     <div class="buttons ">
-<button ><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M25.3677 18.9391V9.86768C25.3677 4.70215 21.1655 0.5 16 0.5C10.8345 0.5 6.63232 4.70215 6.63232 9.86768V18.9397C4.96704 19.4224 3.73828 20.9544 3.73828 22.8374C3.73828 25.0386 5.5293 26.8296 7.73096 26.8296H11.377V26.877C11.377 29.4263 13.4507 31.5 16 31.5C18.5493 31.5 20.6231 29.4263 20.6231 26.8769V26.8296H24.2691C26.4707 26.8296 28.2617 25.0386 28.2617 22.7583C28.2617 20.9406 27.033 19.4198 25.3677 18.9391ZM9.63232 9.86768C9.63232 6.35645 12.4888 3.5 16 3.5C19.5112 3.5 22.3677 6.35645 22.3677 9.86768V18.7661H9.63232V9.86768ZM17.6231 26.8769C17.6231 27.772 16.895 28.5 16 28.5C15.105 28.5 14.377 27.772 14.377 26.8769V26.8296H17.623V26.8769H17.6231ZM24.269 23.8296H7.73096C7.1836 23.8296 6.73828 23.3843 6.73828 22.7583C6.73828 22.2114 7.18359 21.7661 7.73096 21.7661H24.2691C24.8164 21.7661 25.2617 22.2114 25.2617 22.8374C25.2617 23.3843 24.8164 23.8296 24.269 23.8296Z" fill="#A098AE"/>
-</svg>
-
-</button>
-<div class="admin">
-<div class="d-inline">
-<h5>Nabila A.</h5>
-<p>admin</p>
-</div>
-<svg class="icon"width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="60" height="60" rx="30" fill="#C1BBEB"/>
-</svg>
-
-</div>
-</div>   
+          
       
       
 
@@ -219,1780 +193,113 @@ let dashboard_html = `
 
 
 `;
-/**making dashboard default */
-view.innerHTML = dashboard_html;
 
-/**********side bar functionality******** */
-/**dashboard */
-dashboard_li.addEventListener("click", function () {
-  document.querySelectorAll("ul li").forEach((el) => {
-    el.classList.remove("active");
-  });
-
-  dashboard_li.classList.add("active");
-
-  view.innerHTML = dashboard_html;
-});
-
-/**food */ 
- 
-  food_li.addEventListener("click", function () {
-  document.querySelectorAll("ul li").forEach((el) => el.classList.remove("active"));
-  food_li.classList.add("active");
-const foods = [
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-  ];
-
-  function renderFoodList() {
-    view.innerHTML = `
-      <h2 class="food_h2">Food</h2>
-      <div class="search-section float-end bg-white" style="width:30%">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-<path d="M23.6 21.8L18 16.2C19.3 14.5 20.1 12.4 20.1 10.1C20.1 4.60001 15.6 0.100006 10.1 0.100006C4.6 0.100006 0 4.60001 0 10.1C0 15.6 4.5 20.1 10 20.1C12.3 20.1 14.5 19.3 16.2 17.9L21.8 23.5C22 23.7 22.4 23.9 22.7 23.9C23 23.9 23.3 23.8 23.6 23.5C24.1 23.1 24.1 22.3 23.6 21.8ZM2.5 10.1C2.5 6.00001 5.9 2.60001 10 2.60001C14.1 2.60001 17.5 6.00001 17.5 10.1C17.5 14.2 14.1 17.6 10 17.6C5.9 17.6 2.5 14.3 2.5 10.1Z" fill="#4D44B5"/>
-</svg>     
-        <input type="text" id="search" placeholder="search here...">
-      </div>
-      <div class="food-list-container" id="food-list-container"></div>
-      <div class="f-pagination"></div>
-    `;
-
-    const food_list_container = document.getElementById("food-list-container");
-    const pagination_container = document.querySelector(".f-pagination");
-
-    const itemsPerPage = 7;
-    let currentPage = 1;
-
-    function renderPage(pageNumber) {
-      const start = (pageNumber - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-
-      let html = "";
-
-      for (let i = start; i < end && i < foods.length; i++) {
-        const food = foods[i];
-        html += `
-          <div class="food-row" style="cursor:pointer;" data-index="${i}">
-            <div class="food-icon"></div>
-            <p class="food-name">${food.title}</p>
-            <p class="food-rating"><svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.0554 0.717387C13.3667 -0.178173 14.6333 -0.178173 14.9446 0.717387L17.5334 8.16501C17.6707 8.56008 18.0394 8.82795 18.4575 8.83647L26.3406 8.99711C27.2886 9.01643 27.6799 10.221 26.9244 10.7938L20.6413 15.5573C20.308 15.81 20.1671 16.2434 20.2883 16.6438L22.5715 24.1907C22.846 25.0982 21.8214 25.8426 21.0432 25.3011L14.5712 20.7975C14.2279 20.5586 13.7721 20.5586 13.4288 20.7975L6.95684 25.3011C6.1786 25.8426 5.15396 25.0982 5.42851 24.1907L7.71173 16.6438C7.83285 16.2434 7.69202 15.81 7.35873 15.5573L1.0756 10.7938C0.320066 10.221 0.711446 9.01643 1.65937 8.99711L9.54246 8.83647C9.96063 8.82795 10.3293 8.56008 10.4666 8.16501L13.0554 0.717387Z" fill="#FCC43E"/>
-</svg>
- ${food.rating}</p>
-            <div class="food-orders"><svg xmlns="http://www.w3.org/2000/svg" width="62" height="53" viewBox="0 0 62 53" fill="none">
-<path d="M8 31.7387C8 30.1102 6.20914 28.7901 4 28.7901C1.79086 28.7901 0 30.1102 0 31.7387V50.0515C0 51.6799 1.79086 53 4 53C6.20914 53 8 51.6799 8 50.0515V31.7387Z" fill="#4D44B5"/>
-<path d="M26 21.2318C26 19.6242 24.2091 18.321 22 18.321C19.7909 18.321 18 19.6242 18 21.2318V50.0892C18 51.6968 19.7909 53 22 53C24.2091 53 26 51.6968 26 50.0892V21.2318Z" fill="#4D44B5"/>
-<path d="M44 2.96576C44 1.32781 42.2091 0 40 0C37.7909 0 36 1.32782 36 2.96576V50.0342C36 51.6722 37.7909 53 40 53C42.2091 53 44 51.6722 44 50.0342V2.96576Z" fill="#4D44B5"/>
-<path d="M62 26.5054C62 24.8762 60.2091 23.5556 58 23.5556C55.7909 23.5556 54 24.8762 54 26.5054V50.0502C54 51.6793 55.7909 53 58 53C60.2091 53 62 51.6793 62 50.0502V26.5054Z" fill="#4D44B5"/>
-</svg>${food.orders} <br/> total order</div>
-            <div class="food-percent">${food.orderPercent}%</div>
-          </div>
-        `;
-      }
-
-      food_list_container.innerHTML = html;
-
-      document.querySelectorAll(".food-row").forEach((row) => {
-        row.addEventListener("click", () => {
-          const index = row.dataset.index;
-          showFoodDetails(foods[index]);
-        });
-      });
-
-      renderPagination();
-    }
-
-    function renderPagination() {
-      const totalPages = Math.ceil(foods.length / itemsPerPage);
-      let buttonsHTML = "";
-
-      for (let i = 1; i <= totalPages; i++) {
-        buttonsHTML += `
-          <button class="page-btn ${i === currentPage ? "active" : ""}" data-page="${i}">${i}</button>
-        `;
-      }
-
-      pagination_container.innerHTML = buttonsHTML;
-
-      document.querySelectorAll(".page-btn").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          currentPage = parseInt(e.target.dataset.page);
-          renderPage(currentPage);
-        });
-      });
-    }
-
-    renderPage(currentPage);
-  }
-
-  function showFoodDetails(food) {
-    view.innerHTML = `
-      <div class="food-details-page p-4 bg-white rounded shadow">
-      <svg width="361" height="239" viewBox="0 0 361 239" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="361" height="239" rx="18" fill="#C1BBEB"/>
-</svg>
-
-        <h2 class="mb-2">${food.title}</h2>
-        <span class="badge bg-secondary mb-3">${food.type}</span>
-        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-        <div class="row g-4 mb-4">
-          <div class="col"><p><strong>Total Order:</strong> ${food.orders}</p></div>
-          <div class="col"><p><strong>Interest:</strong> ${food.interest}%</p></div>
-          <div class="col"><p><strong>Order %:</strong> ${food.orderPercent}%</p></div>
-          <div class="col"><p><strong>Rating:</strong> ${food.rating}</p></div>
-        </div>
-
-        <div class="mb-4">
-          <h4>Ingredients</h4>
-          <ul>
-            <li>2 tablespoons butter, softened, divided</li>
-            <li>1 teaspoon minced fresh parsley</li>
-            <li>1/2 teaspoon minced garlic</li>
-            <li>1/4 teaspoon reduced-sodium soy sauce</li>
-            <li>1 beef flat iron steak (3/4 pound)</li>
-            <li>1/8 teaspoon salt</li>
-            <li>1/8 teaspoon pepper</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Nutrition</h4>
-          <ul>
-            <li>Calories: 217</li>
-            <li>Water: 61%</li>
-            <li>Protein: 26.1 grams</li>
-            <li>Carbs: 0 grams</li>
-            <li>Sugar: 0 grams</li>
-            <li>Fiber: 0 grams</li>
-            <li>Fat: 11.8 grams</li>
-          </ul>
-        </div>
-
-       
-      </div>
-    `;
-
-    document.getElementById("back-to-list").addEventListener("click", () => {
-      renderFoodList();
-    });
-  }
-
-  renderFoodList();
-});
-
-
+ view.innerHTML=dashboard_html;
 /**teacher */
 
 teacher_li.addEventListener("click", function () {
-  document
-    .querySelectorAll("ul li")
-    .forEach((el) => el.classList.remove("active"));
+  document.querySelectorAll("ul li").forEach(el => el.classList.remove("active"));
   teacher_li.classList.add("active");
 
+
   view.innerHTML = `
- <div class="tsidetags">
-  <div class="buttons d-inline w-25">
-    <button>
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10.2631 0.666672L9.41671 4.46615C8.93534 4.69779 8.47519 4.96458 8.03389 5.26563L4.32035 4.09636L0.583374 10.5703L3.39848 13.1484C3.28849 13.9648 3.33831 14.3672 3.39848 14.8516L0.583374 17.4297L4.32035 23.9037L8.03389 22.7344C8.47519 23.0354 8.93534 23.3022 9.41671 23.5339L10.2631 27.3333H17.737L18.5834 23.5339C19.0647 23.3022 19.5249 23.0354 19.9662 22.7344L23.6797 23.9037L27.4167 17.4297L24.6016 14.8516C24.6246 14.5682 24.6664 14.2845 24.6667 14C24.6678 13.7069 24.6216 13.4108 24.6016 13.1484L27.4167 10.5703L23.6797 4.09636L19.9662 5.26563C19.5249 4.96458 19.0647 4.69779 18.5834 4.46615L17.737 0.666672H10.2631ZM12.4037 3.33334H15.5964L16.2552 6.29167L16.9167 6.55209C17.6649 6.84512 18.3644 7.24846 18.9922 7.75001L19.5495 8.19271L22.4401 7.28386L24.0365 10.0495L21.8021 12.099L21.9089 12.8021C22.0346 13.5797 22.0101 14.4746 21.9089 15.1979L21.8021 15.901L24.0365 17.9505L22.4401 20.7162L19.5495 19.8073L18.9922 20.25C18.3644 20.7516 17.6649 21.1549 16.9167 21.4479L16.2552 21.7083L15.5964 24.6667H12.4037L11.7448 21.7083L11.0834 21.4479C10.3351 21.1549 9.63569 20.7516 9.00785 20.25L8.45056 19.8073L5.55994 20.7162L3.96358 17.9505L6.19796 15.901L6.09119 15.1979C5.96095 14.4046 5.98095 13.4967 6.09119 12.8021L6.19796 12.099L3.96358 10.0495L5.55994 7.28386L8.45056 8.19271L9.00785 7.75001C9.63569 7.24846 10.3351 6.84512 11.0834 6.55209L11.7448 6.29167L12.4037 3.33334ZM14 8.66667C11.0703 8.66667 8.66671 11.0703 8.66671 14C8.66671 16.9297 11.0703 19.3333 14 19.3333C16.9298 19.3333 19.3334 16.9297 19.3334 14C19.3334 11.0703 16.9298 8.66667 14 8.66667ZM14 11.3333C15.4886 11.3333 16.6667 12.5115 16.6667 14C16.6667 15.4886 15.4886 16.6667 14 16.6667C12.5115 16.6667 11.3334 15.4886 11.3334 14C11.3334 12.5115 12.5115 11.3333 14 11.3333Z" fill="#A098AE"/>
-</svg>
-    </button>
-  </div>
-
-  <div class="buttons">
-    <button>
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M25.3677 18.9391V9.86768C25.3677 4.70215 21.1655 0.5 16 0.5C10.8345 0.5 6.63232 4.70215 6.63232 9.86768V18.9397C4.96704 19.4224 3.73828 20.9544 3.73828 22.8374C3.73828 25.0386 5.5293 26.8296 7.73096 26.8296H11.377V26.877C11.377 29.4263 13.4507 31.5 16 31.5C18.5493 31.5 20.6231 29.4263 20.6231 26.8769V26.8296H24.2691C26.4707 26.8296 28.2617 25.0386 28.2617 22.7583C28.2617 20.9406 27.033 19.4198 25.3677 18.9391ZM9.63232 9.86768C9.63232 6.35645 12.4888 3.5 16 3.5C19.5112 3.5 22.3677 6.35645 22.3677 9.86768V18.7661H9.63232V9.86768ZM17.6231 26.8769C17.6231 27.772 16.895 28.5 16 28.5C15.105 28.5 14.377 27.772 14.377 26.8769V26.8296H17.623V26.8769H17.6231ZM24.269 23.8296H7.73096C7.1836 23.8296 6.73828 23.3843 6.73828 22.7583C6.73828 22.2114 7.18359 21.7661 7.73096 21.7661H24.2691C24.8164 21.7661 25.2617 22.2114 25.2617 22.8374C25.2617 23.3843 24.8164 23.8296 24.269 23.8296Z" fill="#A098AE"/>
-</svg>
-    </button>
-
-    <div class="admin">
-      <div class="d-inline">
-        <h5>Nabila A.</h5>
-        <p>admin</p>
-      </div>
-      <svg class="icon"width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="60" height="60" rx="30" fill="#C1BBEB"/>
-</svg>
-    </div>
-  </div>
-
-  <button class="add-new-teacher">+ Add new teacher</button>
-</div>
-
-<h2 class="teacher_h2">Teachers</h2>
-
-<div class="search-section bg-white" style="width:30%">
-  
-   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <h2 class="teacher_h2">Teachers</h2>
+     <div class="search-section  bg-white" style="width:30%">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M23.6 21.8L18 16.2C19.3 14.5 20.1 12.4 20.1 10.1C20.1 4.60001 15.6 0.100006 10.1 0.100006C4.6 0.100006 0 4.60001 0 10.1C0 15.6 4.5 20.1 10 20.1C12.3 20.1 14.5 19.3 16.2 17.9L21.8 23.5C22 23.7 22.4 23.9 22.7 23.9C23 23.9 23.3 23.8 23.6 23.5C24.1 23.1 24.1 22.3 23.6 21.8ZM2.5 10.1C2.5 6.00001 5.9 2.60001 10 2.60001C14.1 2.60001 17.5 6.00001 17.5 10.1C17.5 14.2 14.1 17.6 10 17.6C5.9 17.6 2.5 14.3 2.5 10.1Z" fill="#4D44B5"/>
-</svg>         
-  <input class="" type="text" name="search" id="search" placeholder="search here...">
-</div>
+</svg>        
+       <input class=" " type="text" name="search " id="search" placeholder="search here...">
 
-<div class="teachers-list-container" id="teachers-list-container"></div>
-
-<div class="-pagination"></div>
-
+    </div>
+    
+    <div class="teachers-list-container" id="teachers-list-container"></div>
+   
+   
+    <div class="t-pagination"></div>
   `;
 
   const teachers = [
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
+    { name: "Alexander Hamilton", field: "Political Science" },
+    { name: "Margaret Kensington", field: "Environmental Studies" },
+    { name: "Christopher Langford", field: "Modern History" },
+    { name: "Isabella Montgomery", field: "Comparative Literature" },
+    { name: "Benjamin Whitaker", field: "Applied Mathematics" },
+    { name: "Catherine Holloway", field: "Human Psychology" },
+    { name: "Nathaniel Hawthorne", field: "Creative Writing" },
+    { name: "Elizabeth Fairchild", field: "Biomedical Engineering" },
+    { name: "Sebastian Kingsley", field: "Astrophysics" },
+    { name: "Victoria Wetherby", field: "International Relations" },
+    { name: "Jonathan Blackwood", field: "Artificial Intelligence" },
+    { name: "Penelope Worthington", field: "Philosophy of Science" },
+    { name: "Frederick Ellington", field: "Ancient Civilizations" },
+    { name: "Charlotte Abernathy", field: "Genetic Biology" },
+    { name: "Theodore Kensington", field: "Quantum Mechanics" },
+    { name: "Alexander Hamilton", field: "Political Science" },
+    { name: "Margaret Kensington", field: "Environmental Studies" },
+    { name: "Christopher Langford", field: "Modern History" },
+    { name: "Isabella Montgomery", field: "Comparative Literature" },
+    { name: "Benjamin Whitaker", field: "Applied Mathematics" },
+    { name: "Catherine Holloway", field: "Human Psychology" },
+    { name: "Nathaniel Hawthorne", field: "Creative Writing" },
+    { name: "Elizabeth Fairchild", field: "Biomedical Engineering" },
+    { name: "Sebastian Kingsley", field: "Astrophysics" },
+    { name: "Victoria Wetherby", field: "International Relations" },
+    { name: "Jonathan Blackwood", field: "Artificial Intelligence" },
+    { name: "Penelope Worthington", field: "Philosophy of Science" },
+    { name: "Frederick Ellington", field: "Ancient Civilizations" },
+    { name: "Charlotte Abernathy", field: "Genetic Biology" },
+    { name: "Theodore Kensington", field: "Quantum Mechanics" },
+    { name: "Alexander Hamilton", field: "Political Science" },
+    { name: "Margaret Kensington", field: "Environmental Studies" },
+    { name: "Christopher Langford", field: "Modern History" },
+    { name: "Isabella Montgomery", field: "Comparative Literature" },
+    { name: "Benjamin Whitaker", field: "Applied Mathematics" },
+    { name: "Catherine Holloway", field: "Human Psychology" },
+    { name: "Nathaniel Hawthorne", field: "Creative Writing" },
+    { name: "Elizabeth Fairchild", field: "Biomedical Engineering" },
+    { name: "Sebastian Kingsley", field: "Astrophysics" },
+    { name: "Victoria Wetherby", field: "International Relations" },
+    { name: "Jonathan Blackwood", field: "Artificial Intelligence" },
+    { name: "Penelope Worthington", field: "Philosophy of Science" },
+    { name: "Frederick Ellington", field: "Ancient Civilizations" },
+    { name: "Charlotte Abernathy", field: "Genetic Biology" },
+    { name: "Theodore Kensington", field: "Quantum Mechanics" },
+    { name: "Alexander Hamilton", field: "Political Science" },
+    { name: "Margaret Kensington", field: "Environmental Studies" },
+    { name: "Christopher Langford", field: "Modern History" },
+    { name: "Isabella Montgomery", field: "Comparative Literature" },
+    { name: "Benjamin Whitaker", field: "Applied Mathematics" },
+    { name: "Catherine Holloway", field: "Human Psychology" },
+    { name: "Nathaniel Hawthorne", field: "Creative Writing" },
+    { name: "Elizabeth Fairchild", field: "Biomedical Engineering" },
+    { name: "Sebastian Kingsley", field: "Astrophysics" },
+    { name: "Victoria Wetherby", field: "International Relations" },
+    { name: "Jonathan Blackwood", field: "Artificial Intelligence" },
+    { name: "Penelope Worthington", field: "Philosophy of Science" },
+    { name: "Frederick Ellington", field: "Ancient Civilizations" },
+    { name: "Charlotte Abernathy", field: "Genetic Biology" },
+    { name: "Theodore Kensington", field: "Quantum Mechanics" },
+    { name: "Alexander Hamilton", field: "Political Science" },
+    { name: "Margaret Kensington", field: "Environmental Studies" },
+    { name: "Christopher Langford", field: "Modern History" },
+    { name: "Isabella Montgomery", field: "Comparative Literature" },
+    { name: "Benjamin Whitaker", field: "Applied Mathematics" },
+    { name: "Catherine Holloway", field: "Human Psychology" },
+    { name: "Nathaniel Hawthorne", field: "Creative Writing" },
+    { name: "Elizabeth Fairchild", field: "Biomedical Engineering" },
+    { name: "Sebastian Kingsley", field: "Astrophysics" },
+    { name: "Victoria Wetherby", field: "International Relations" },
+    { name: "Jonathan Blackwood", field: "Artificial Intelligence" },
+    { name: "Penelope Worthington", field: "Philosophy of Science" },
+    { name: "Frederick Ellington", field: "Ancient Civilizations" },
+    { name: "Charlotte Abernathy", field: "Genetic Biology" },
+    { name: "Theodore Kensington", field: "Quantum Mechanics" },
   ];
 
-  const teachers_list_container = document.getElementById(
-    "teachers-list-container"
-  );
-  const pagination_container = document.querySelector(".-pagination");
+  const teachers_list_container = document.getElementById("teachers-list-container");
+  const pagination_container = document.querySelector(".t-pagination");
 
-  const itemsPerPage = 20;
+  const itemsPerPage =20;
   let currentPage = 1;
 
   function renderPage(pageNumber) {
@@ -2003,159 +310,24 @@ teacher_li.addEventListener("click", function () {
 
     for (let i = start; i < end && i < teachers.length; i++) {
       html += `
-      <div class="teacher_card" data-index="${i}">
-        <div class="teacher_icon"></div>
-        <p class="teacher-name">${teachers[i].name}</p>
-        <p class="teacher-field">${teachers[i].field}</p>
-        <div class="teacher-icons">
-       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <div class="teacher_card">
+          <div class="teacher_icon"></div>
+          <p class="teacher-name">${teachers[i].name}</p>
+          <p class="teacher-field">${teachers[i].field}</p>
+          <div class="teacher-icons">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M19.4401 13C19.2201 13 18.9901 12.93 18.7701 12.88C18.3246 12.7818 17.8868 12.6515 17.4601 12.49C16.9962 12.3212 16.4862 12.33 16.0284 12.5146C15.5706 12.6992 15.1972 13.0466 14.9801 13.49L14.7601 13.94C13.7861 13.3982 12.8911 12.7252 12.1001 11.94C11.3149 11.149 10.6419 10.254 10.1001 9.27999L10.5201 8.99999C10.9635 8.78291 11.3109 8.40952 11.4955 7.95168C11.6801 7.49384 11.6889 6.9839 11.5201 6.51999C11.3613 6.09241 11.231 5.65479 11.1301 5.20999C11.0801 4.98999 11.0401 4.75999 11.0101 4.52999C10.8887 3.82561 10.5197 3.18773 9.96972 2.73123C9.41972 2.27473 8.7248 2.0296 8.0101 2.03999H5.0101C4.57913 2.03594 4.15235 2.1248 3.75881 2.30052C3.36527 2.47624 3.01421 2.73469 2.72953 3.05827C2.44485 3.38186 2.23324 3.76298 2.10909 4.1757C1.98494 4.58842 1.95118 5.02305 2.0101 5.44999C2.54284 9.63937 4.45613 13.5319 7.44775 16.5126C10.4394 19.4934 14.3388 21.3925 18.5301 21.91H18.9101C19.6475 21.9111 20.3595 21.6405 20.9101 21.15C21.2265 20.867 21.4792 20.5202 21.6516 20.1323C21.8239 19.7444 21.9121 19.3244 21.9101 18.9V15.9C21.8979 15.2054 21.6449 14.5365 21.1944 14.0077C20.744 13.4788 20.1239 13.1226 19.4401 13ZM19.9401 19C19.9399 19.142 19.9095 19.2823 19.8509 19.4116C19.7923 19.5409 19.7068 19.6563 19.6001 19.75C19.4884 19.8465 19.3577 19.9185 19.2165 19.9616C19.0753 20.0046 18.9267 20.0177 18.7801 20C15.035 19.5198 11.5563 17.8065 8.89282 15.1303C6.2293 12.4541 4.53251 8.96733 4.0701 5.21999C4.05419 5.07351 4.06813 4.92532 4.1111 4.78438C4.15407 4.64344 4.22517 4.51268 4.3201 4.39999C4.41381 4.29332 4.52916 4.20783 4.65848 4.14921C4.7878 4.09058 4.92812 4.06017 5.0701 4.05999H8.0701C8.30265 4.05482 8.52972 4.13087 8.71224 4.27506C8.89476 4.41925 9.02131 4.62256 9.0701 4.84999C9.1101 5.12332 9.1601 5.39332 9.2201 5.65999C9.33562 6.18713 9.48936 6.70517 9.6801 7.20999L8.2801 7.85999C8.1604 7.91491 8.05272 7.99294 7.96326 8.08959C7.87379 8.18623 7.8043 8.2996 7.75877 8.42318C7.71324 8.54677 7.69257 8.67812 7.69795 8.80971C7.70332 8.9413 7.73464 9.07054 7.7901 9.18999C9.2293 12.2727 11.7073 14.7508 14.7901 16.19C15.0336 16.29 15.3066 16.29 15.5501 16.19C15.6748 16.1454 15.7894 16.0764 15.8873 15.9872C15.9851 15.8979 16.0643 15.7901 16.1201 15.67L16.7401 14.27C17.2571 14.4549 17.7847 14.6085 18.3201 14.73C18.5868 14.79 18.8568 14.84 19.1301 14.88C19.3575 14.9288 19.5608 15.0553 19.705 15.2378C19.8492 15.4204 19.9253 15.6474 19.9201 15.88L19.9401 19Z" fill="white"/>
 </svg>
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
 <path d="M19 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3V13C0 13.7956 0.31607 14.5587 0.87868 15.1213C1.44129 15.6839 2.20435 16 3 16H19C19.7956 16 20.5587 15.6839 21.1213 15.1213C21.6839 14.5587 22 13.7956 22 13V3C22 2.20435 21.6839 1.44129 21.1213 0.87868C20.5587 0.316071 19.7956 0 19 0ZM20 12.75L15.1 8.35L20 4.92V12.75ZM2 4.92L6.9 8.35L2 12.75V4.92ZM8.58 9.53L10.43 10.82C10.5974 10.9361 10.7963 10.9984 11 10.9984C11.2037 10.9984 11.4026 10.9361 11.57 10.82L13.42 9.53L18.42 14H3.6L8.58 9.53ZM3 2H19C19.1857 2.00149 19.3674 2.05467 19.5245 2.15358C19.6817 2.25249 19.8083 2.39322 19.89 2.56L11 8.78L2.11 2.56C2.19171 2.39322 2.31826 2.25249 2.47545 2.15358C2.63265 2.05467 2.81428 2.00149 3 2Z" fill="white"/>
 </svg>
+          </div>
         </div>
-      </div>
-    `;
+      `;
     }
 
     teachers_list_container.innerHTML = html;
-
-    document.querySelectorAll(".teacher_card").forEach((card) => {
-      card.addEventListener("click", () => {
-        const index = card.dataset.index;
-        showTeacherDetails(teachers[index]);
-      });
-    });
-
     renderPagination();
-  }
-
-  function showTeacherDetails(teacher) {
-    view.innerHTML = "";
-    pagination_container.innerHTML = "";
-
-    const educationHTML = teacher.education
-      .map((e) => `<li>${e.degree} <span>(${e.years})</span></li>`)
-      .join("");
-    const expertiseHTML = teacher.expertise
-      .map((skill) => `<span class="tag">${skill}</span>`)
-      .join("");
-
-    view.innerHTML = `
-    <div class="teacher-details bg-white p-4 rounded shadow-sm">
-  <!-- Left side: Main info -->
-  <div class="" style="min-width: 0;">
-    <img src="assets/Masking.png" alt="${teacher.name}" class="img-fluid rounded mb-3 w-100">
-
-    <h2 class="h4 fw-bold mb-2">${teacher.name}</h2>
-   
-   <p class="text-muted mb-1">${teacher.field}</p>
-  <P>
-   <span class="text-muted mb-1"><svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 13.4 7.05 19.5 7.35 19.76C7.53113 19.9149 7.76165 20.0001 8 20.0001C8.23835 20.0001 8.46887 19.9149 8.65 19.76C9 19.5 16 13.4 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0ZM8 17.65C5.87 15.65 2 11.34 2 8C2 6.4087 2.63214 4.88258 3.75736 3.75736C4.88258 2.63214 6.4087 2 8 2C9.5913 2 11.1174 2.63214 12.2426 3.75736C13.3679 4.88258 14 6.4087 14 8C14 11.34 10.13 15.66 8 17.65ZM8 4C7.20887 4 6.43552 4.2346 5.77772 4.67412C5.11992 5.11365 4.60723 5.73836 4.30448 6.46927C4.00173 7.20017 3.92252 8.00444 4.07686 8.78036C4.2312 9.55628 4.61216 10.269 5.17157 10.8284C5.73098 11.3878 6.44371 11.7688 7.21964 11.9231C7.99556 12.0775 8.79983 11.9983 9.53073 11.6955C10.2616 11.3928 10.8864 10.8801 11.3259 10.2223C11.7654 9.56448 12 8.79113 12 8C12 6.93913 11.5786 5.92172 10.8284 5.17157C10.0783 4.42143 9.06087 4 8 4ZM8 10C7.60444 10 7.21776 9.8827 6.88886 9.66294C6.55996 9.44318 6.30362 9.13082 6.15224 8.76537C6.00087 8.39991 5.96126 7.99778 6.03843 7.60982C6.1156 7.22186 6.30608 6.86549 6.58579 6.58579C6.86549 6.30608 7.22186 6.1156 7.60982 6.03843C7.99778 5.96126 8.39991 6.00087 8.76537 6.15224C9.13082 6.30362 9.44318 6.55996 9.66294 6.88886C9.8827 7.21776 10 7.60444 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10Z" fill="white"/>
-</svg>
-${teacher.location}</span>
-    <span class="text-muted mb-1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.4396 13C19.2196 13 18.9896 12.93 18.7696 12.88C18.3241 12.7818 17.8863 12.6515 17.4596 12.49C16.9957 12.3212 16.4858 12.33 16.0279 12.5146C15.5701 12.6992 15.1967 13.0466 14.9796 13.49L14.7596 13.94C13.7856 13.3982 12.8906 12.7252 12.0996 11.94C11.3144 11.149 10.6414 10.254 10.0996 9.27999L10.5196 8.99999C10.963 8.78291 11.3104 8.40952 11.495 7.95168C11.6796 7.49384 11.6884 6.9839 11.5196 6.51999C11.3608 6.09241 11.2305 5.65479 11.1296 5.20999C11.0796 4.98999 11.0396 4.75999 11.0096 4.52999C10.8882 3.82561 10.5192 3.18773 9.96923 2.73123C9.41923 2.27473 8.72431 2.0296 8.00961 2.03999H5.00961C4.57864 2.03594 4.15186 2.1248 3.75832 2.30052C3.36478 2.47624 3.01372 2.73469 2.72904 3.05827C2.44436 3.38186 2.23275 3.76298 2.1086 4.1757C1.98445 4.58842 1.95069 5.02305 2.00961 5.44999C2.54235 9.63937 4.45564 13.5319 7.44726 16.5126C10.4389 19.4934 14.3383 21.3925 18.5296 21.91H18.9096C19.647 21.9111 20.359 21.6405 20.9096 21.15C21.226 20.867 21.4787 20.5202 21.6511 20.1323C21.8235 19.7444 21.9116 19.3244 21.9096 18.9V15.9C21.8974 15.2054 21.6444 14.5365 21.194 14.0077C20.7435 13.4788 20.1234 13.1226 19.4396 13ZM19.9396 19C19.9394 19.142 19.909 19.2823 19.8504 19.4116C19.7918 19.5409 19.7063 19.6563 19.5996 19.75C19.4879 19.8465 19.3572 19.9185 19.216 19.9616C19.0748 20.0046 18.9262 20.0177 18.7796 20C15.0345 19.5198 11.5558 17.8065 8.89233 15.1303C6.22881 12.4541 4.53202 8.96733 4.06961 5.21999C4.0537 5.07351 4.06765 4.92532 4.11061 4.78438C4.15358 4.64344 4.22468 4.51268 4.31961 4.39999C4.41332 4.29332 4.52867 4.20783 4.65799 4.14921C4.78731 4.09058 4.92763 4.06017 5.06961 4.05999H8.06961C8.30216 4.05482 8.52924 4.13087 8.71176 4.27506C8.89428 4.41925 9.02082 4.62256 9.06961 4.84999C9.10961 5.12332 9.15961 5.39332 9.21961 5.65999C9.33513 6.18713 9.48887 6.70517 9.67961 7.20999L8.27961 7.85999C8.15991 7.91491 8.05223 7.99294 7.96277 8.08959C7.87331 8.18623 7.80381 8.2996 7.75828 8.42318C7.71275 8.54677 7.69208 8.67812 7.69746 8.80971C7.70284 8.9413 7.73415 9.07054 7.78961 9.18999C9.22881 12.2727 11.7069 14.7508 14.7896 16.19C15.0331 16.29 15.3062 16.29 15.5496 16.19C15.6743 16.1454 15.7889 16.0764 15.8868 15.9872C15.9846 15.8979 16.0638 15.7901 16.1196 15.67L16.7396 14.27C17.2566 14.4549 17.7842 14.6085 18.3196 14.73C18.5863 14.79 18.8563 14.84 19.1296 14.88C19.357 14.9288 19.5604 15.0553 19.7045 15.2378C19.8487 15.4204 19.9248 15.6474 19.9196 15.88L19.9396 19Z" fill="white"/>
-</svg>
- ${teacher.phone}</span>
-    <span class="text-muted mb-3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19 4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V17C2 17.7956 2.31607 18.5587 2.87868 19.1213C3.44129 19.6839 4.20435 20 5 20H19C19.7956 20 20.5587 19.6839 21.1213 19.1213C21.6839 18.5587 22 17.7956 22 17V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4ZM18.427 6L12.6 10.8C12.4335 10.9267 12.2312 10.9976 12.022 11.0026C11.8129 11.0077 11.6074 10.9465 11.435 10.828L5.573 6H18.427ZM19 18H5C4.73478 18 4.48043 17.8946 4.29289 17.7071C4.10536 17.5196 4 17.2652 4 17V7.3L10.2 12.4C10.7159 12.7863 11.3435 12.9944 11.988 12.993C12.6551 12.992 13.3037 12.774 13.836 12.372L20 7.3V17C20 17.2652 19.8946 17.5196 19.7071 17.7071C19.5196 17.8946 19.2652 18 19 18Z" fill="white"/>
-</svg>
- ${teacher.email}</span>
-<p/>
-    <h5 class="fw-semibold mb-2">About</h5>
-    <p class="mb-3">${teacher.about}</p>
-
-    <h5 class="fw-semibold mb-2">Education</h5>
-    <ul class="mb-3">
-      ${educationHTML}
-    </ul>
-
-    <h5 class="fw-semibold mb-2">Expertise</h5>
-    <div class="d-flex flex-wrap gap-2">
-      ${expertiseHTML}
-    </div>
-  </div>
-
-  
-</div>
-<!-- Right side: Schedule -->
-  <div  class=" p-3 rounded sc-teacher">
-   <div class="schedule-sidebar">
-  <div class="sc-header"><h5>Schedule Details</h5> <p>Thursday, 10th April , 2021</p></div>
-   
-   
-  <ul class="list-unstyled text-muted small">
-    <li><p>
-   <span>World History</span>
-   Class VII-B
-    </p>
-    <p>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 5.25H16.5V4.5C16.5 4.30109 16.421 4.11032 16.2803 3.96967C16.1397 3.82902 15.9489 3.75 15.75 3.75C15.5511 3.75 15.3603 3.82902 15.2197 3.96967C15.079 4.11032 15 4.30109 15 4.5V5.25H12.75V4.5C12.75 4.30109 12.671 4.11032 12.5303 3.96967C12.3897 3.82902 12.1989 3.75 12 3.75C11.8011 3.75 11.6103 3.82902 11.4697 3.96967C11.329 4.11032 11.25 4.30109 11.25 4.5V5.25H9V4.5C9 4.30109 8.92098 4.11032 8.78033 3.96967C8.63968 3.82902 8.44891 3.75 8.25 3.75C8.05109 3.75 7.86032 3.82902 7.71967 3.96967C7.57902 4.11032 7.5 4.30109 7.5 4.5V5.25H6C5.40326 5.25 4.83097 5.48705 4.40901 5.90901C3.98705 6.33097 3.75 6.90326 3.75 7.5V18C3.75 18.5967 3.98705 19.169 4.40901 19.591C4.83097 20.0129 5.40326 20.25 6 20.25H18C18.5967 20.25 19.169 20.0129 19.591 19.591C20.0129 19.169 20.25 18.5967 20.25 18V7.5C20.25 6.90326 20.0129 6.33097 19.591 5.90901C19.169 5.48705 18.5967 5.25 18 5.25ZM5.25 7.5C5.25 7.30109 5.32902 7.11032 5.46967 6.96967C5.61032 6.82902 5.80109 6.75 6 6.75H7.5V7.5C7.5 7.69891 7.57902 7.88968 7.71967 8.03033C7.86032 8.17098 8.05109 8.25 8.25 8.25C8.44891 8.25 8.63968 8.17098 8.78033 8.03033C8.92098 7.88968 9 7.69891 9 7.5V6.75H11.25V7.5C11.25 7.69891 11.329 7.88968 11.4697 8.03033C11.6103 8.17098 11.8011 8.25 12 8.25C12.1989 8.25 12.3897 8.17098 12.5303 8.03033C12.671 7.88968 12.75 7.69891 12.75 7.5V6.75H15V7.5C15 7.69891 15.079 7.88968 15.2197 8.03033C15.3603 8.17098 15.5511 8.25 15.75 8.25C15.9489 8.25 16.1397 8.17098 16.2803 8.03033C16.421 7.88968 16.5 7.69891 16.5 7.5V6.75H18C18.1989 6.75 18.3897 6.82902 18.5303 6.96967C18.671 7.11032 18.75 7.30109 18.75 7.5V9.75H5.25V7.5ZM18.75 18C18.75 18.1989 18.671 18.3897 18.5303 18.5303C18.3897 18.671 18.1989 18.75 18 18.75H6C5.80109 18.75 5.61032 18.671 5.46967 18.5303C5.32902 18.3897 5.25 18.1989 5.25 18V11.25H18.75V18Z" fill="#FB7D5B"/>
-</svg>
-March 20, 2021
-    </p>
-    <P><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z" fill="#FCC43E"/>
-<path d="M15 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V12C11 12.2652 11.1054 12.5196 11.2929 12.7071C11.4804 12.8946 11.7348 13 12 13H15C15.2652 13 15.5196 12.8946 15.7071 12.7071C15.8946 12.5196 16 12.2652 16 12C16 11.7348 15.8946 11.4804 15.7071 11.2929C15.5196 11.1054 15.2652 11 15 11Z" fill="#FCC43E"/>
-</svg>
-
-09.00 - 10.00 AM</P></li>
-   <li><p>
-   <span>World History</span>
-   Class VII-B
-    </p>
-    <p>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 5.25H16.5V4.5C16.5 4.30109 16.421 4.11032 16.2803 3.96967C16.1397 3.82902 15.9489 3.75 15.75 3.75C15.5511 3.75 15.3603 3.82902 15.2197 3.96967C15.079 4.11032 15 4.30109 15 4.5V5.25H12.75V4.5C12.75 4.30109 12.671 4.11032 12.5303 3.96967C12.3897 3.82902 12.1989 3.75 12 3.75C11.8011 3.75 11.6103 3.82902 11.4697 3.96967C11.329 4.11032 11.25 4.30109 11.25 4.5V5.25H9V4.5C9 4.30109 8.92098 4.11032 8.78033 3.96967C8.63968 3.82902 8.44891 3.75 8.25 3.75C8.05109 3.75 7.86032 3.82902 7.71967 3.96967C7.57902 4.11032 7.5 4.30109 7.5 4.5V5.25H6C5.40326 5.25 4.83097 5.48705 4.40901 5.90901C3.98705 6.33097 3.75 6.90326 3.75 7.5V18C3.75 18.5967 3.98705 19.169 4.40901 19.591C4.83097 20.0129 5.40326 20.25 6 20.25H18C18.5967 20.25 19.169 20.0129 19.591 19.591C20.0129 19.169 20.25 18.5967 20.25 18V7.5C20.25 6.90326 20.0129 6.33097 19.591 5.90901C19.169 5.48705 18.5967 5.25 18 5.25ZM5.25 7.5C5.25 7.30109 5.32902 7.11032 5.46967 6.96967C5.61032 6.82902 5.80109 6.75 6 6.75H7.5V7.5C7.5 7.69891 7.57902 7.88968 7.71967 8.03033C7.86032 8.17098 8.05109 8.25 8.25 8.25C8.44891 8.25 8.63968 8.17098 8.78033 8.03033C8.92098 7.88968 9 7.69891 9 7.5V6.75H11.25V7.5C11.25 7.69891 11.329 7.88968 11.4697 8.03033C11.6103 8.17098 11.8011 8.25 12 8.25C12.1989 8.25 12.3897 8.17098 12.5303 8.03033C12.671 7.88968 12.75 7.69891 12.75 7.5V6.75H15V7.5C15 7.69891 15.079 7.88968 15.2197 8.03033C15.3603 8.17098 15.5511 8.25 15.75 8.25C15.9489 8.25 16.1397 8.17098 16.2803 8.03033C16.421 7.88968 16.5 7.69891 16.5 7.5V6.75H18C18.1989 6.75 18.3897 6.82902 18.5303 6.96967C18.671 7.11032 18.75 7.30109 18.75 7.5V9.75H5.25V7.5ZM18.75 18C18.75 18.1989 18.671 18.3897 18.5303 18.5303C18.3897 18.671 18.1989 18.75 18 18.75H6C5.80109 18.75 5.61032 18.671 5.46967 18.5303C5.32902 18.3897 5.25 18.1989 5.25 18V11.25H18.75V18Z" fill="#FB7D5B"/>
-</svg>
-March 20, 2021
-    </p>
-    <P><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z" fill="#FCC43E"/>
-<path d="M15 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V12C11 12.2652 11.1054 12.5196 11.2929 12.7071C11.4804 12.8946 11.7348 13 12 13H15C15.2652 13 15.5196 12.8946 15.7071 12.7071C15.8946 12.5196 16 12.2652 16 12C16 11.7348 15.8946 11.4804 15.7071 11.2929C15.5196 11.1054 15.2652 11 15 11Z" fill="#FCC43E"/>
-</svg>
-
-09.00 - 10.00 AM</P></li>   <li><p>
-   <span>World History</span>
-   Class VII-B
-    </p>
-    <p>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 5.25H16.5V4.5C16.5 4.30109 16.421 4.11032 16.2803 3.96967C16.1397 3.82902 15.9489 3.75 15.75 3.75C15.5511 3.75 15.3603 3.82902 15.2197 3.96967C15.079 4.11032 15 4.30109 15 4.5V5.25H12.75V4.5C12.75 4.30109 12.671 4.11032 12.5303 3.96967C12.3897 3.82902 12.1989 3.75 12 3.75C11.8011 3.75 11.6103 3.82902 11.4697 3.96967C11.329 4.11032 11.25 4.30109 11.25 4.5V5.25H9V4.5C9 4.30109 8.92098 4.11032 8.78033 3.96967C8.63968 3.82902 8.44891 3.75 8.25 3.75C8.05109 3.75 7.86032 3.82902 7.71967 3.96967C7.57902 4.11032 7.5 4.30109 7.5 4.5V5.25H6C5.40326 5.25 4.83097 5.48705 4.40901 5.90901C3.98705 6.33097 3.75 6.90326 3.75 7.5V18C3.75 18.5967 3.98705 19.169 4.40901 19.591C4.83097 20.0129 5.40326 20.25 6 20.25H18C18.5967 20.25 19.169 20.0129 19.591 19.591C20.0129 19.169 20.25 18.5967 20.25 18V7.5C20.25 6.90326 20.0129 6.33097 19.591 5.90901C19.169 5.48705 18.5967 5.25 18 5.25ZM5.25 7.5C5.25 7.30109 5.32902 7.11032 5.46967 6.96967C5.61032 6.82902 5.80109 6.75 6 6.75H7.5V7.5C7.5 7.69891 7.57902 7.88968 7.71967 8.03033C7.86032 8.17098 8.05109 8.25 8.25 8.25C8.44891 8.25 8.63968 8.17098 8.78033 8.03033C8.92098 7.88968 9 7.69891 9 7.5V6.75H11.25V7.5C11.25 7.69891 11.329 7.88968 11.4697 8.03033C11.6103 8.17098 11.8011 8.25 12 8.25C12.1989 8.25 12.3897 8.17098 12.5303 8.03033C12.671 7.88968 12.75 7.69891 12.75 7.5V6.75H15V7.5C15 7.69891 15.079 7.88968 15.2197 8.03033C15.3603 8.17098 15.5511 8.25 15.75 8.25C15.9489 8.25 16.1397 8.17098 16.2803 8.03033C16.421 7.88968 16.5 7.69891 16.5 7.5V6.75H18C18.1989 6.75 18.3897 6.82902 18.5303 6.96967C18.671 7.11032 18.75 7.30109 18.75 7.5V9.75H5.25V7.5ZM18.75 18C18.75 18.1989 18.671 18.3897 18.5303 18.5303C18.3897 18.671 18.1989 18.75 18 18.75H6C5.80109 18.75 5.61032 18.671 5.46967 18.5303C5.32902 18.3897 5.25 18.1989 5.25 18V11.25H18.75V18Z" fill="#FB7D5B"/>
-</svg>
-March 20, 2021
-    </p>
-    <P><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z" fill="#FCC43E"/>
-<path d="M15 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V12C11 12.2652 11.1054 12.5196 11.2929 12.7071C11.4804 12.8946 11.7348 13 12 13H15C15.2652 13 15.5196 12.8946 15.7071 12.7071C15.8946 12.5196 16 12.2652 16 12C16 11.7348 15.8946 11.4804 15.7071 11.2929C15.5196 11.1054 15.2652 11 15 11Z" fill="#FCC43E"/>
-</svg>
-
-09.00 - 10.00 AM</P></li>   <li><p>
-   <span>World History</span>
-   Class VII-B
-    </p>
-    <p>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 5.25H16.5V4.5C16.5 4.30109 16.421 4.11032 16.2803 3.96967C16.1397 3.82902 15.9489 3.75 15.75 3.75C15.5511 3.75 15.3603 3.82902 15.2197 3.96967C15.079 4.11032 15 4.30109 15 4.5V5.25H12.75V4.5C12.75 4.30109 12.671 4.11032 12.5303 3.96967C12.3897 3.82902 12.1989 3.75 12 3.75C11.8011 3.75 11.6103 3.82902 11.4697 3.96967C11.329 4.11032 11.25 4.30109 11.25 4.5V5.25H9V4.5C9 4.30109 8.92098 4.11032 8.78033 3.96967C8.63968 3.82902 8.44891 3.75 8.25 3.75C8.05109 3.75 7.86032 3.82902 7.71967 3.96967C7.57902 4.11032 7.5 4.30109 7.5 4.5V5.25H6C5.40326 5.25 4.83097 5.48705 4.40901 5.90901C3.98705 6.33097 3.75 6.90326 3.75 7.5V18C3.75 18.5967 3.98705 19.169 4.40901 19.591C4.83097 20.0129 5.40326 20.25 6 20.25H18C18.5967 20.25 19.169 20.0129 19.591 19.591C20.0129 19.169 20.25 18.5967 20.25 18V7.5C20.25 6.90326 20.0129 6.33097 19.591 5.90901C19.169 5.48705 18.5967 5.25 18 5.25ZM5.25 7.5C5.25 7.30109 5.32902 7.11032 5.46967 6.96967C5.61032 6.82902 5.80109 6.75 6 6.75H7.5V7.5C7.5 7.69891 7.57902 7.88968 7.71967 8.03033C7.86032 8.17098 8.05109 8.25 8.25 8.25C8.44891 8.25 8.63968 8.17098 8.78033 8.03033C8.92098 7.88968 9 7.69891 9 7.5V6.75H11.25V7.5C11.25 7.69891 11.329 7.88968 11.4697 8.03033C11.6103 8.17098 11.8011 8.25 12 8.25C12.1989 8.25 12.3897 8.17098 12.5303 8.03033C12.671 7.88968 12.75 7.69891 12.75 7.5V6.75H15V7.5C15 7.69891 15.079 7.88968 15.2197 8.03033C15.3603 8.17098 15.5511 8.25 15.75 8.25C15.9489 8.25 16.1397 8.17098 16.2803 8.03033C16.421 7.88968 16.5 7.69891 16.5 7.5V6.75H18C18.1989 6.75 18.3897 6.82902 18.5303 6.96967C18.671 7.11032 18.75 7.30109 18.75 7.5V9.75H5.25V7.5ZM18.75 18C18.75 18.1989 18.671 18.3897 18.5303 18.5303C18.3897 18.671 18.1989 18.75 18 18.75H6C5.80109 18.75 5.61032 18.671 5.46967 18.5303C5.32902 18.3897 5.25 18.1989 5.25 18V11.25H18.75V18Z" fill="#FB7D5B"/>
-</svg>
-March 20, 2021
-    </p>
-    <P><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C10.4178 20 8.87104 19.5308 7.55544 18.6518C6.23985 17.7727 5.21447 16.5233 4.60897 15.0615C4.00347 13.5997 3.84504 11.9911 4.15372 10.4393C4.4624 8.88743 5.22433 7.46197 6.34315 6.34315C7.46197 5.22433 8.88743 4.4624 10.4393 4.15372C11.9911 3.84504 13.5997 4.00346 15.0615 4.60896C16.5233 5.21447 17.7727 6.23984 18.6518 7.55544C19.5308 8.87103 20 10.4177 20 12C20 14.1217 19.1572 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z" fill="#FCC43E"/>
-<path d="M15 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V12C11 12.2652 11.1054 12.5196 11.2929 12.7071C11.4804 12.8946 11.7348 13 12 13H15C15.2652 13 15.5196 12.8946 15.7071 12.7071C15.8946 12.5196 16 12.2652 16 12C16 11.7348 15.8946 11.4804 15.7071 11.2929C15.5196 11.1054 15.2652 11 15 11Z" fill="#FCC43E"/>
-</svg>
-
-09.00 - 10.00 AM</P></li>
-  </ul>
-</div>
-
-  </div>
-
-  `;
   }
 
   function renderPagination() {
@@ -2164,9 +336,7 @@ March 20, 2021
 
     for (let i = 1; i <= totalPages; i++) {
       buttonsHTML += `
-        <button class="page-btn ${
-          i === currentPage ? "active" : ""
-        }" data-page="${i}">
+        <button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">
           ${i}
         </button>
       `;
@@ -2174,7 +344,7 @@ March 20, 2021
 
     pagination_container.innerHTML = buttonsHTML;
 
-    document.querySelectorAll(".page-btn").forEach((btn) => {
+    document.querySelectorAll(".page-btn").forEach(btn => {
       btn.addEventListener("click", (e) => {
         currentPage = parseInt(e.target.dataset.page);
         renderPage(currentPage);
@@ -2183,248 +353,216 @@ March 20, 2021
   }
 
   renderPage(currentPage);
+});
 
 
+/**food */
+food_li.addEventListener("click", function () {
+  document.querySelectorAll("ul li").forEach(el => el.classList.remove("active"));
+  food_li.classList.add("active");
 
-document.querySelector(".add-new-teacher").addEventListener("click", () => {
   view.innerHTML = `
-  <div class="tsidetags">
-  <div class="buttons d-inline w-25">
-    <button>
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10.2631 0.666672L9.41671 4.46615C8.93534 4.69779 8.47519 4.96458 8.03389 5.26563L4.32035 4.09636L0.583374 10.5703L3.39848 13.1484C3.28849 13.9648 3.33831 14.3672 3.39848 14.8516L0.583374 17.4297L4.32035 23.9037L8.03389 22.7344C8.47519 23.0354 8.93534 23.3022 9.41671 23.5339L10.2631 27.3333H17.737L18.5834 23.5339C19.0647 23.3022 19.5249 23.0354 19.9662 22.7344L23.6797 23.9037L27.4167 17.4297L24.6016 14.8516C24.6246 14.5682 24.6664 14.2845 24.6667 14C24.6678 13.7069 24.6216 13.4108 24.6016 13.1484L27.4167 10.5703L23.6797 4.09636L19.9662 5.26563C19.5249 4.96458 19.0647 4.69779 18.5834 4.46615L17.737 0.666672H10.2631ZM12.4037 3.33334H15.5964L16.2552 6.29167L16.9167 6.55209C17.6649 6.84512 18.3644 7.24846 18.9922 7.75001L19.5495 8.19271L22.4401 7.28386L24.0365 10.0495L21.8021 12.099L21.9089 12.8021C22.0346 13.5797 22.0101 14.4746 21.9089 15.1979L21.8021 15.901L24.0365 17.9505L22.4401 20.7162L19.5495 19.8073L18.9922 20.25C18.3644 20.7516 17.6649 21.1549 16.9167 21.4479L16.2552 21.7083L15.5964 24.6667H12.4037L11.7448 21.7083L11.0834 21.4479C10.3351 21.1549 9.63569 20.7516 9.00785 20.25L8.45056 19.8073L5.55994 20.7162L3.96358 17.9505L6.19796 15.901L6.09119 15.1979C5.96095 14.4046 5.98095 13.4967 6.09119 12.8021L6.19796 12.099L3.96358 10.0495L5.55994 7.28386L8.45056 8.19271L9.00785 7.75001C9.63569 7.24846 10.3351 6.84512 11.0834 6.55209L11.7448 6.29167L12.4037 3.33334ZM14 8.66667C11.0703 8.66667 8.66671 11.0703 8.66671 14C8.66671 16.9297 11.0703 19.3333 14 19.3333C16.9298 19.3333 19.3334 16.9297 19.3334 14C19.3334 11.0703 16.9298 8.66667 14 8.66667ZM14 11.3333C15.4886 11.3333 16.6667 12.5115 16.6667 14C16.6667 15.4886 15.4886 16.6667 14 16.6667C12.5115 16.6667 11.3334 15.4886 11.3334 14C11.3334 12.5115 12.5115 11.3333 14 11.3333Z" fill="#A098AE"/>
-</svg>
-    </button>
-  </div>
-
-  <div class="buttons">
-    <button>
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M25.3677 18.9391V9.86768C25.3677 4.70215 21.1655 0.5 16 0.5C10.8345 0.5 6.63232 4.70215 6.63232 9.86768V18.9397C4.96704 19.4224 3.73828 20.9544 3.73828 22.8374C3.73828 25.0386 5.5293 26.8296 7.73096 26.8296H11.377V26.877C11.377 29.4263 13.4507 31.5 16 31.5C18.5493 31.5 20.6231 29.4263 20.6231 26.8769V26.8296H24.2691C26.4707 26.8296 28.2617 25.0386 28.2617 22.7583C28.2617 20.9406 27.033 19.4198 25.3677 18.9391ZM9.63232 9.86768C9.63232 6.35645 12.4888 3.5 16 3.5C19.5112 3.5 22.3677 6.35645 22.3677 9.86768V18.7661H9.63232V9.86768ZM17.6231 26.8769C17.6231 27.772 16.895 28.5 16 28.5C15.105 28.5 14.377 27.772 14.377 26.8769V26.8296H17.623V26.8769H17.6231ZM24.269 23.8296H7.73096C7.1836 23.8296 6.73828 23.3843 6.73828 22.7583C6.73828 22.2114 7.18359 21.7661 7.73096 21.7661H24.2691C24.8164 21.7661 25.2617 22.2114 25.2617 22.8374C25.2617 23.3843 24.8164 23.8296 24.269 23.8296Z" fill="#A098AE"/>
-</svg>
-    </button>
-
-    <div class="admin">
-      <div class="d-inline">
-        <h5>Nabila A.</h5>
-        <p>admin</p>
-      </div>
-      <svg class="icon"width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="60" height="60" rx="30" fill="#C1BBEB"/>
-</svg>
+    <h2 class="food_h2">Food</h2>
+    <div class="search-section float-end  bg-white" style="width:30%">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path d="M23.6 21.8L18 16.2C19.3 14.5 20.1 12.4 20.1 10.1C20.1 4.60001 15.6 0.100006 10.1 0.100006C4.6 0.100006 0 4.60001 0 10.1C0 15.6 4.5 20.1 10 20.1C12.3 20.1 14.5 19.3 16.2 17.9L21.8 23.5C22 23.7 22.4 23.9 22.7 23.9C23 23.9 23.3 23.8 23.6 23.5C24.1 23.1 24.1 22.3 23.6 21.8ZM2.5 10.1C2.5 6.00001 5.9 2.60001 10 2.60001C14.1 2.60001 17.5 6.00001 17.5 10.1C17.5 14.2 14.1 17.6 10 17.6C5.9 17.6 2.5 14.3 2.5 10.1Z" fill="#4D44B5"/>
+</svg>        <input type="text" id="search" placeholder="search here...">
     </div>
-  </div>
-</div>
-    <div id="add-teacher-form" style="margin-top:20px;">
-      <h3>Add New Teacher</h3>
-
-      <div class="personal-details">
-        <h4>Personal Details</h4>
-        <div class="input-group">
-          <label>First Name *</label>
-          <input type="text" id="teacher-firstname" placeholder="Maria" />
-        </div>
-        <div class="input-group">
-          <label>Last Name *</label>
-          <input type="text" id="teacher-lastname" placeholder="Historia" />
-        </div>
-        <div class="input-group">
-          <label>Email *</label>
-          <input type="email" id="teacher-email" placeholder="Historia@mail.com" />
-        </div>
-        <div class="input-group">
-          <label>Phone *</label>
-          <input type="text" id="teacher-phone" placeholder="+1234567890" />
-        </div>
-        <div class="input-group">
-          <label>Address *</label>
-          <textarea id="teacher-address" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."></textarea>
-        </div>
-        <div class="input-group">
-          <label>Photo *</label>
-          <div style="border: 1px dashed #ccc; padding: 10px; text-align: center;">
-            Drag and drop or <strong>click here</strong> to select file
-          </div>
-      
-        </div>
-        <div class="input-group">
-          <label>Date of Birth *</label>
-          <input type="text" id="teacher-dob" placeholder="24 February 1997" />
-        </div>
-        <div class="input-group">
-          <label>Place of Birth *</label>
-          <input type="text" id="teacher-birthplace" placeholder="Jakarta, Indonesia" />
-        </div>
-      </div>
-
-      <div class="education-details" style="margin-top: 30px;">
-        <h4>Education</h4>
-        <div class="input-group">
-          <label>University *</label>
-          <input type="text" id="teacher-university" placeholder="University Akademi Historia" />
-        </div>
-        <div class="input-group">
-          <label>Degree *</label>
-          <input type="text" id="teacher-degree" placeholder="History Major" />
-        </div>
-        <div class="input-group">
-          <label>Start & End Date *</label>
-          <div style="display: flex; gap: 10px;">
-            <input type="text" id="teacher-start" placeholder="September 2013" />
-            <input type="text" id="teacher-end" placeholder="September 2017" />
-          </div>
-        </div>
-        <div class="input-group">
-          <label>City *</label>
-          <input type="text" id="teacher-city" placeholder="Yogyakarta, Indonesia" />
-        </div>
-      </div>
-
-      <div style="margin-top: 20px;">
-        <button class="btn btn-secondary" style="margin-right:10px;">Save as Draft</button>
-        <button class="btn btn-primary" id="submit-teacher">Submit</button>
-      </div>
-    </div>
+    <div class="food-list-container" id="food-list-container"></div>
+    <div class="f-pagination"></div>
   `;
 
-  document.getElementById("submit-teacher").addEventListener("click", submitNewTeacher);
-});
+  const foods = [
+    { title: "Beef Steak with Fried Potato", rating: 4.9, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Pancake with Honey", rating: 4.7, orders: 1456, interest: 50, orderPercent: 26, type: "Breakfast" },
+    { title: "Japanese Beef Ramen", rating: 4.8, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Mixed Salad", rating: 4.2, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Beef Meatball with Vegetable", rating: 4.5, orders: 1456, interest: 50, orderPercent: 26, type: "Snack" },
+    { title: "Beef Steak with Fried Potato", rating: 4.9, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Pancake with Honey", rating: 4.7, orders: 1456, interest: 50, orderPercent: 26, type: "Breakfast" },
+    { title: "Japanese Beef Ramen", rating: 4.8, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Mixed Salad", rating: 4.2, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Beef Meatball with Vegetable", rating: 4.5, orders: 1456, interest: 50, orderPercent: 26, type: "Snack" },
+    { title: "Beef Steak with Fried Potato", rating: 4.9, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Pancake with Honey", rating: 4.7, orders: 1456, interest: 50, orderPercent: 26, type: "Breakfast" },
+    { title: "Japanese Beef Ramen", rating: 4.8, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Mixed Salad", rating: 4.2, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Beef Meatball with Vegetable", rating: 4.5, orders: 1456, interest: 50, orderPercent: 26, type: "Snack" },
+    { title: "Beef Steak with Fried Potato", rating: 4.9, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Pancake with Honey", rating: 4.7, orders: 1456, interest: 50, orderPercent: 26, type: "Breakfast" },
+    { title: "Japanese Beef Ramen", rating: 4.8, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Mixed Salad", rating: 4.2, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Beef Meatball with Vegetable", rating: 4.5, orders: 1456, interest: 50, orderPercent: 26, type: "Snack" },
+    { title: "Beef Steak with Fried Potato", rating: 4.9, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Pancake with Honey", rating: 4.7, orders: 1456, interest: 50, orderPercent: 26, type: "Breakfast" },
+    { title: "Japanese Beef Ramen", rating: 4.8, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Mixed Salad", rating: 4.2, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Beef Meatball with Vegetable", rating: 4.5, orders: 1456, interest: 50, orderPercent: 26, type: "Snack" },
+    { title: "Beef Steak with Fried Potato", rating: 4.9, orders: 1456, interest: 50, orderPercent: 26, type: "Lunch" },
+    { title: "Pancake with Honey", rating: 4.7, orders: 1456, interest: 50, orderPercent: 26, type: "Breakfast" },
+   { title: "Beef Meatball with Vegetable", rating: 4.5, orders: 1456, interest: 50, orderPercent: 26, type: "Snack" },
+  ];
 
+  const food_list_container = document.getElementById("food-list-container"); 
+  const pagination_container = document.querySelector(".f-pagination");
 
-function submitNewTeacher() {
-  const firstName = document.getElementById("teacher-firstname").value.trim();
-  const lastName = document.getElementById("teacher-lastname").value.trim();
-  const email = document.getElementById("teacher-email").value.trim();
-  const phone = document.getElementById("teacher-phone").value.trim();
-  const address = document.getElementById("teacher-address").value.trim();
-  const dob = document.getElementById("teacher-dob").value.trim();
-  const birthplace = document.getElementById("teacher-birthplace").value.trim();
-  const university = document.getElementById("teacher-university").value.trim();
-  const degree = document.getElementById("teacher-degree").value.trim();
-  const startDate = document.getElementById("teacher-start").value.trim();
-  const endDate = document.getElementById("teacher-end").value.trim();
-  const city = document.getElementById("teacher-city").value.trim();
+  const itemsPerPage = 7;
+  let currentPage = 1;
 
-  if (!firstName || !lastName || !email) {
-    alert("Please fill in all required fields.");
-    return;
+  function renderPage(pageNumber) {
+    const start = (pageNumber - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+
+    let html = "";
+
+    for (let i = start; i < end && i < foods.length; i++) {
+      const food = foods[i];
+      html += `
+        <div class="food-row">
+          <div class="food-icon"></div>
+          <p class="food-name">${food.title}</p>
+          <p class="food-rating"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26" fill="none">
+<path d="M13.0554 0.717387C13.3667 -0.178173 14.6333 -0.178173 14.9446 0.717387L17.5334 8.16501C17.6707 8.56008 18.0394 8.82795 18.4575 8.83647L26.3406 8.99711C27.2886 9.01643 27.6799 10.221 26.9244 10.7938L20.6413 15.5573C20.308 15.81 20.1671 16.2434 20.2883 16.6438L22.5715 24.1907C22.846 25.0982 21.8214 25.8426 21.0432 25.3011L14.5712 20.7975C14.2279 20.5586 13.7721 20.5586 13.4288 20.7975L6.95684 25.3011C6.1786 25.8426 5.15396 25.0982 5.42851 24.1907L7.71173 16.6438C7.83285 16.2434 7.69202 15.81 7.35873 15.5573L1.0756 10.7938C0.320066 10.221 0.711446 9.01643 1.65937 8.99711L9.54246 8.83647C9.96063 8.82795 10.3293 8.56008 10.4666 8.16501L13.0554 0.717387Z" fill="#FCC43E"/>
+</svg> ${food.rating}</p>
+          <p class="food-orders"><svg xmlns="http://www.w3.org/2000/svg" width="62" height="53" viewBox="0 0 62 53" fill="none">
+<path d="M8 31.7387C8 30.1102 6.20914 28.7901 4 28.7901C1.79086 28.7901 0 30.1102 0 31.7387V50.0515C0 51.6799 1.79086 53 4 53C6.20914 53 8 51.6799 8 50.0515V31.7387Z" fill="#4D44B5"/>
+<path d="M26 21.2318C26 19.6242 24.2091 18.321 22 18.321C19.7909 18.321 18 19.6242 18 21.2318V50.0892C18 51.6968 19.7909 53 22 53C24.2091 53 26 51.6968 26 50.0892V21.2318Z" fill="#4D44B5"/>
+<path d="M44 2.96576C44 1.32781 42.2091 0 40 0C37.7909 0 36 1.32782 36 2.96576V50.0342C36 51.6722 37.7909 53 40 53C42.2091 53 44 51.6722 44 50.0342V2.96576Z" fill="#4D44B5"/>
+<path d="M62 26.5054C62 24.8762 60.2091 23.5556 58 23.5556C55.7909 23.5556 54 24.8762 54 26.5054V50.0502C54 51.6793 55.7909 53 58 53C60.2091 53 62 51.6793 62 50.0502V26.5054Z" fill="#4D44B5"/>
+</svg> ${food.orders}</p>
+          <p class="food-percent">${food.orderPercent}%</p>
+        </div>
+      `;
+    }
+
+    food_list_container.innerHTML = html;
+    renderPagination();
   }
 
-  const newTeacher = {
-    name: `${firstName} ${lastName}`,
-    email,
-    phone,
-    address,
-    dob,
-    birthplace,
-    university,
-    degree,
-    startDate,
-    endDate,
-    city
-  };
+  function renderPagination() {
+    const totalPages = Math.ceil(foods.length / itemsPerPage);
+    let buttonsHTML = "";
 
-  teachers.push(newTeacher);
-  alert("Teacher added successfully!");
+    for (let i = 1; i <= totalPages; i++) {
+      buttonsHTML += `
+        <button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">
+          ${i}
+        </button>
+      `;
+    }
 
-  // ممكن ترجعي هنا لقائمة المدرسين أو تعملي render
-}
+    pagination_container.innerHTML = buttonsHTML;
 
+    document.querySelectorAll(".page-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        currentPage = parseInt(e.target.dataset.page);
+        renderPage(currentPage);
+      });
+    });
+  }
+
+  renderPage(currentPage); 
 });
+
+/**********side bar functionality******** */
+/**dashboard */
+dashboard_li.addEventListener("click", function() {
+  
+ 
+  document.querySelectorAll("ul li").forEach(el => {
+    el.classList.remove("active");
+  });
+
+
+  dashboard_li.classList.add("active");
+  
+  view.innerHTML=dashboard_html
+  
+});
+
+
+ 
 
 //**************************************************************************dashboard js************************************************* */
 
 /***********************chart*********************** */
 
-(function () {
-  const ctx = document.getElementById("myChart").getContext("2d");
+ (function(){const ctx = document.getElementById('myChart').getContext('2d');
 
   // Gradient for first line
   const gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
-  gradient1.addColorStop(0, "rgba(251, 125, 91, 0.4)");
-  gradient1.addColorStop(1, "rgba(251, 125, 91, 0)");
+  gradient1.addColorStop(0, 'rgba(251, 125, 91, 0.4)');
+  gradient1.addColorStop(1, 'rgba(251, 125, 91, 0)');
 
   // Gradient for second line
   const gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
-  gradient2.addColorStop(0, "rgba(252, 196, 62, 0.4)");
-  gradient2.addColorStop(1, "rgba(252, 196, 62, 0)");
+  gradient2.addColorStop(0, 'rgba(252, 196, 62, 0.4)');
+  gradient2.addColorStop(1, 'rgba(252, 196, 62, 0)');
 
   new Chart(ctx, {
-    type: "line",
+    type: 'line',
     data: {
       labels: [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
       ],
       datasets: [
         {
-          label: "Last Week",
+          label: 'Last Week',
           data: [10, 20, 35, 40, 30, 25, 50, 60, 45, 70, 55, 80],
-          borderColor: "rgba(251, 125, 91, 1)",
+          borderColor: 'rgba(251, 125, 91, 1)',
           backgroundColor: gradient1,
           tension: 0.4,
-          fill: true,
+          fill: true
         },
         {
-          label: "This Week",
+          label: 'This Week',
           data: [15, 25, 20, 35, 45, 40, 60, 55, 65, 75, 85, 90],
-          borderColor: "rgba(252, 196, 62, 1)",
+          borderColor: 'rgba(252, 196, 62, 1)',
           backgroundColor: gradient2,
           tension: 0.4,
-          fill: true,
-        },
-      ],
+          fill: true
+        }
+      ]
     },
     options: {
       scales: {
         x: {
           grid: {
-            display: true,
+            display: true,     
             drawOnChartArea: true,
             drawTicks: false,
-            color: "rgba(0,0,0,0.05)",
-          },
+            color: 'rgba(0,0,0,0.05)'
+          }
         },
         y: {
           grid: {
-            display: false,
+            display: false    
           },
           ticks: {
             stepSize: 25,
             beginAtZero: true,
-            max: 100,
-          },
-        },
+            max: 100
+          }
+        }
       },
       plugins: {
         legend: {
           display: true,
-          position: "top",
-          align: "end",
+          position: 'top',
+          align: 'end',
           labels: {
             usePointStyle: true,
-            pointStyle: "circle",
+            pointStyle: 'circle',
             boxWidth: 10,
-            padding: 20,
-          },
-        },
-      },
-    },
-  });
-})();
+            padding: 20
+          }
+        }
+      }
+    }
+  });})();
 /*********************sec char********************** */
-(function () {
-  const barCtx = document.getElementById("barChart").getContext("2d");
+(function(){ const barCtx = document.getElementById("barChart").getContext("2d");
 
   const days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
 
@@ -2447,35 +585,35 @@ function submitNewTeacher() {
           data: [10, 20, 35, 40, 30, 25, 50],
           backgroundColor: grad1,
           borderRadius: 5,
-          barThickness: 10,
+          barThickness: 10
         },
         {
           label: "This Week",
           data: [15, 25, 20, 35, 45, 40, 60],
           backgroundColor: grad2,
           borderRadius: 5,
-          barThickness: 10,
-        },
-      ],
+          barThickness: 10
+        }
+      ]
     },
     options: {
       scales: {
         x: {
           grid: {
-            display: false,
-          },
+            display: false
+          }
         },
         y: {
           beginAtZero: true,
           max: 100,
           ticks: {
-            stepSize: 20,
+            stepSize: 20
           },
           grid: {
             display: true,
-            color: "rgba(0,0,0,0.05)",
-          },
-        },
+            color: "rgba(0,0,0,0.05)"
+          }
+        }
       },
       plugins: {
         legend: {
@@ -2484,76 +622,59 @@ function submitNewTeacher() {
           align: "end",
           labels: {
             usePointStyle: true,
-            pointStyle: "circle",
-          },
-        },
-      },
-    },
-  });
-})();
+            pointStyle: "circle"
+          }
+        }
+      }
+    }
+  });})();
 /****************calender****************** */
-(function () {
-  document.addEventListener("DOMContentLoaded", function () {
-    const calendarEl = document.getElementById("calendar");
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: "dayGridMonth",
-      headerToolbar: {
-        left: "title",
-        right: "prev,next",
-      },
-      events: [
-        {
-          title: "Important",
-          start: "2021-03-08",
-          color: "white",
-          className: "fc-event-important",
-        },
-      ],
-    });
-
-    calendar.render();
+(function(){document.addEventListener('DOMContentLoaded', function () {
+  const calendarEl = document.getElementById('calendar');
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    headerToolbar: {
+      left: 'title',
+      right: 'prev,next'
+    },
+    events: [
+      {
+        title: 'Important',
+        start: '2021-03-08',
+        color: 'white',
+        className: 'fc-event-important'
+      }
+      
+    ]
   });
-})();
+
+  calendar.render();
+});})();
 /*************************table************************************ */
-(function () {
+(function(){
+
   const students = [
-    {
-      name: "Samantha William",
-      id: "123456789",
-      class: "VII A",
-      fees: "$50,036",
-    },
+    
+    { name: "Samantha William", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Jordan Nico", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Karen Hope", id: "123456789", class: "VII A", fees: "$50,036" },
-
-    {
-      name: "Samantha William",
-      id: "123456789",
-      class: "VII A",
-      fees: "$50,036",
-    },
+   
+    { name: "Samantha William", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Jordan Nico", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Karen Hope", id: "123456789", class: "VII A", fees: "$50,036" },
-
-    {
-      name: "Samantha William",
-      id: "123456789",
-      class: "VII A",
-      fees: "$50,036",
-    },
+   
+    { name: "Samantha William", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Jordan Nico", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Karen Hope", id: "123456789", class: "VII A", fees: "$50,036" },
-
-    {
-      name: "Samantha William",
-      id: "123456789",
-      class: "VII A",
-      fees: "$50,036",
-    },
+   
+    { name: "Samantha William", id: "123456789", class: "VII A", fees: "$50,036" },
     { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
+    
+   
+  
   ];
 
   const itemsPerPage = 4;
@@ -2574,9 +695,7 @@ function submitNewTeacher() {
     const end = start + itemsPerPage;
     const visibleStudents = students.slice(start, end);
 
-    tableBody.innerHTML = visibleStudents
-      .map(
-        (student) => `
+    tableBody.innerHTML = visibleStudents.map(student => `
       <tr>
         <td><div class="table-icon"></div></td>
         <td>${student.name}</td>
@@ -2587,9 +706,7 @@ function submitNewTeacher() {
         <td>${student.fees}</td>
         <td>...</td>
       </tr>
-    `
-      )
-      .join("");
+    `).join("");
 
     // Update active button
     document.querySelectorAll(".page-btn").forEach((btn, index) => {
