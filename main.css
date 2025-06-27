@@ -65,6 +65,9 @@ h5 {
     border: 0px;
     margin-top: 20px;
 }
+ol, ul {
+    padding-left: 5px !important;
+}
 /**************************side bar********************************/
 
 #icon-span {
