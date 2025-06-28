@@ -65,13 +65,7 @@ h5 {
     border: 0px;
     margin-top: 20px;
 }
-<<<<<<< HEAD
 
-=======
-ol, ul {
-    padding-left: 5px !important;
-}
->>>>>>> 45118bedb7a80e654f7500bcde210c24b6dcf3df
 /**************************side bar********************************/
 
 #icon-span {
@@ -886,9 +880,7 @@ ul {
     height: 10vw;
     width: 10vw;
 }
-.food-details-page svg {
-    width: 68vw;
-}
+.food-details-page svg{width: 70vw;}
 
 }
 
