@@ -606,8 +606,9 @@ const foods = [
 
 /**teacher */
 
-teacher_li.addEventListener("click", function () {
-  document
+teacher_li.addEventListener("click", renderTeachersList);
+
+function renderTeachersList(){ document
     .querySelectorAll("ul li")
     .forEach((el) => el.classList.remove("active"));
   teacher_li.classList.add("active");
@@ -2281,7 +2282,7 @@ document.querySelector(".add-new-teacher").addEventListener("click", () => {
       </div>
 
       <div style="margin-top: 20px;">
-        <button class="btn btn-secondary" style="margin-right:10px;">Save as Draft</button>
+
         <button class="btn btn-primary" id="submit-teacher">Submit</button>
       </div>
     </div>
@@ -2325,12 +2326,11 @@ function submitNewTeacher() {
   };
 
   teachers.push(newTeacher);
-  alert("Teacher added successfully!");
-
-  // ممكن ترجعي هنا لقائمة المدرسين أو تعملي render
-}
-
-});
+  console.log(teachers);
+    alert("Teacher added successfully!");
+renderTeachersList(); 
+  
+}}
 
 //**************************************************************************dashboard js************************************************* */
 
