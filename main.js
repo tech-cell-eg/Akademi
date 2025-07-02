@@ -235,6 +235,7 @@ dashboard_li.addEventListener("click", function () {
   chart1();
   chart2();
   cal();
+  table();
 });
 
 /**food */ 
@@ -2496,7 +2497,7 @@ function chart2() {
   });
 };chart2(),
 /****************calender****************** */
-function cal() {
+function cal(){
   document.addEventListener("DOMContentLoaded", function () {
     const calendarEl = document.getElementById("calendar");
     const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -2519,7 +2520,7 @@ function cal() {
   });
 };cal();
 /*************************table************************************ */
-(function () {
+function table() {
   const students = [
     {
       name: "Samantha William",
@@ -2618,4 +2619,4 @@ function cal() {
   }
 
   setupPagination();
-})();
+}table();
