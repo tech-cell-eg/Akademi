@@ -231,6 +231,7 @@ dashboard_li.addEventListener("click", function () {
 
     dashboard_li.classList.add("active");
 
+    
     view.innerHTML = dashboard_html;
      const ctx = document.getElementById("myChart").getContext("2d");
 
