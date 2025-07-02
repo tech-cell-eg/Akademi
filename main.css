@@ -65,9 +65,7 @@ h5 {
     border: 0px;
     margin-top: 20px;
 }
-ol, ul {
-    padding-left: 5px !important;
-}
+
 /**************************side bar********************************/
 
 #icon-span {
@@ -636,10 +634,9 @@ label{display: block
   ;
 }
 /********************food********************************/
-.food-list-container{    background: white;
-    width: 91%
-994.438px
-;
+.food-list-container {
+    background: white;
+    width: 91%;
     margin-top: 19vh;
     margin-left: 2vw;
     border-radius: 20px;
@@ -679,6 +676,7 @@ label{display: block
   color: white;
 }
 .food-row {
+    padding-bottom: 10vh;
     margin-block: 22px;
     display: flex;
     width: 90%;
@@ -692,7 +690,7 @@ label{display: block
     border-radius: 20px;
 }
 .search-section{
-  margin-block: 20px;
+  margin-block: 0px;
   margin-inline: 30px;
 }
 .food-name{width:35%;text-align: center;padding-top: 2vw;}
@@ -709,17 +707,17 @@ text-align: center; padding-top: 2vw;}
     border-radius: 50%;
 }
 /******************************************/
-.food-details-page{width:70%;
+.food-details-page{width:85%;
 margin:5vw 0 5vw 5vw}
 /***************************responsive*********************************/
 
 @media screen and (max-width: 1200px) {
-  .search-section {
-    float: none !important;
-    width: 90% !important;
+.search-section {
+    width: 73% !important;
     margin-block: 9px;
-    margin-inline: auto;
+    margin-inline: 5vw;
 }
+.buttons .icon {top:70px}
 #icon-span{display: none;}
  .dashboard-inner-side{display: none;}
   
@@ -735,7 +733,45 @@ aside{width:25vw}
     margin-left: 5vw;
   
 }
+.add-new-teacher {
 
+    margin-top: 62px;
+}
+
+.teacher_h2, h2 {
+    margin: 54px;
+}
+.tsidetags {
+    margin-right: 1vw;
+    padding-top: 16px;
+    width: 20%;
+    float: right;
+    font-size: 14px;
+}
+.buttons .icon {
+    width: 80px;}
+    .food-list-container {
+    background: white;
+    width: 86%;
+    margin-top: 19vh;
+    margin-left: 6vw;
+    border-radius: 20px;
+    padding: 2vh;
+}
+.search-section {
+    width: 87% !important;
+    margin-block: -2px;
+    margin-inline: 5vw;
+}
+
+.food-percent {
+    padding: 4px;
+}
+.food-list-container {
+ 
+    margin-top: 3vh;
+ 
+}
 }
 @media screen and (max-width: 1135px) {
 .search-section {
@@ -753,9 +789,29 @@ margin: auto;
 margin-left: 7vw !important;}
 .sc-teacher{width:90%;
 margin-left: 7vw !important;}
-}
+.food-percent
+ {
+    padding: 6px;
+    height: 6vw;
+    width: 6vw;
+}}
 @media screen and (max-width: 816px) {
-
+  .search-section {
+  
+    margin-inline: unset;
+}
+.add-new-teacher {
+    padding-block: 16px;
+    margin-right: -8px;
+    right: 2px;
+    font-size: 12px;
+    margin-top: 58px;
+}
+.buttons .icon {
+    position: absolute;
+    right: 17px;
+    top: 75px;
+}
   h1{font-size: 17px;}
 aside {
     width: 13vw;
@@ -765,14 +821,14 @@ aside {
     left: 13vw;
 }
 li span{display: none;}
-
+.food-icon {display: none;}
 }
 @media screen and (max-width: 750px) {
 .search-section {
     float: none !important;
     width: 90%;
     margin-block: 9px;
-    margin-inline: auto;
+    margin-inline: 3vw;
 }
  #pagination {
    
@@ -786,8 +842,18 @@ li span{display: none;}
 .teachers-list-container{height:auto;
 
 }
+.tsidetags{width:30%}
+    .add-new-teacher {
+      margin-top: 45px};
+.add-new-teacher {
+ 
+    margin-top:58 px;
+    font-size: 10px;
+}
+.food-details-page {
+    width: 88%;
 
-
+}
 }
 @media screen and (max-width: 660px) {
 .num-card {
@@ -799,16 +865,27 @@ li span{display: none;}
     height: 24vh;
     padding-top: 0;
 }
-
+.add-new-teacher {
+    width: 79vw;
 }
-
-
-@media screen and (max-width: 660px){
-  .grid-container{padding:20px}
+ .grid-container{padding:20px}
 tr > td:nth-child(2){display: none;}
 
+ul {
+    padding-left: 20px !important;
+}
+
+.food-percent {
+    padding: 6px;
+    height: 10vw;
+    width: 10vw;
+}
+.food-details-page svg{width: 70vw;}
 
 }
+
+
+
 @media screen and (max-width: 590px){
 h1{display: none;}
   .active::after{display:none}
@@ -818,6 +895,20 @@ h1{display: none;}
     background: aliceblue;
     border-radius: 18px 0 0 18px;
 }
+ ul {
+    padding-left: 5px !important
+    ;
+}
+.add-new-teacher {
+    width: 79vw;
+    margin-top: 18vh;
+    margin-right: 5vw;
+}
+.search-section{width: 91% !important;
+margin-inline: 2vw;}
+    .tsidetags {
+        width: 34%;
+    }
 }
 
 
