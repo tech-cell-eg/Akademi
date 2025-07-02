@@ -234,7 +234,10 @@ dashboard_li.addEventListener("click", function () {
   view.innerHTML = dashboard_html;
   chart1();
   chart2();
+  document.addEventListener("DOMContentLoaded", function () {
   cal();
+});
+
   table();
 });
 
