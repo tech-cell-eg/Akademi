@@ -2495,7 +2495,7 @@ function chart2() {
       },
     },
   });
-};chart2(),
+};chart2();
 /****************calender****************** */
 function cal(){
   document.addEventListener("DOMContentLoaded", function () {
@@ -2518,7 +2518,8 @@ function cal(){
 
     calendar.render();
   });
-};cal();
+};
+cal();
 /*************************table************************************ */
 function table() {
   const students = [
@@ -2619,5 +2620,4 @@ function table() {
   }
 
   setupPagination();
-}table();
-
+};table();
