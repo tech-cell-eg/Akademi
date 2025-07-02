@@ -1,7 +1,7 @@
 /***************global variables********************/
 var unpaid_grid = document.getElementById("unpaid");
 var teachers_list_container = document.getElementById(
-  "teachers-list-container"
+    "teachers-list-container"
 );
 
 let view = document.getElementById("myview");
@@ -225,249 +225,251 @@ view.innerHTML = dashboard_html;
 /**********side bar functionality******** */
 /**dashboard */
 dashboard_li.addEventListener("click", function () {
-  document.querySelectorAll("ul li").forEach((el) => {
-    el.classList.remove("active");
-  });
+    document.querySelectorAll("ul li").forEach((el) => {
+        el.classList.remove("active");
+    });
 
-  dashboard_li.classList.add("active");
+    dashboard_li.classList.add("active");
 
-  view.innerHTML = dashboard_html;
+    view.innerHTML = dashboard_html;
 });
 
-/**food */ 
- 
-  food_li.addEventListener("click", function () {
-  document.querySelectorAll("ul li").forEach((el) => el.classList.remove("active"));
-  food_li.classList.add("active");
-const foods = [
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Japanese Beef Ramen",
-      rating: 4.8,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Mixed Salad",
-      rating: 4.2,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-    {
-      title: "Beef Steak with Fried Potato",
-      rating: 4.9,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Lunch",
-    },
-    {
-      title: "Pancake with Honey",
-      rating: 4.7,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Breakfast",
-    },
-    {
-      title: "Beef Meatball with Vegetable",
-      rating: 4.5,
-      orders: 1456,
-      interest: 50,
-      orderPercent: 26,
-      type: "Snack",
-    },
-  ];
+/**food */
 
-  function renderFoodList() {
-    view.innerHTML = `
+food_li.addEventListener("click", function () {
+    document
+        .querySelectorAll("ul li")
+        .forEach((el) => el.classList.remove("active"));
+    food_li.classList.add("active");
+    const foods = [
+        {
+            title: "Beef Steak with Fried Potato",
+            rating: 4.9,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Pancake with Honey",
+            rating: 4.7,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Breakfast",
+        },
+        {
+            title: "Japanese Beef Ramen",
+            rating: 4.8,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Mixed Salad",
+            rating: 4.2,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Beef Meatball with Vegetable",
+            rating: 4.5,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Snack",
+        },
+        {
+            title: "Beef Steak with Fried Potato",
+            rating: 4.9,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Pancake with Honey",
+            rating: 4.7,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Breakfast",
+        },
+        {
+            title: "Japanese Beef Ramen",
+            rating: 4.8,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Mixed Salad",
+            rating: 4.2,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Beef Meatball with Vegetable",
+            rating: 4.5,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Snack",
+        },
+        {
+            title: "Beef Steak with Fried Potato",
+            rating: 4.9,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Pancake with Honey",
+            rating: 4.7,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Breakfast",
+        },
+        {
+            title: "Japanese Beef Ramen",
+            rating: 4.8,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Mixed Salad",
+            rating: 4.2,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Beef Meatball with Vegetable",
+            rating: 4.5,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Snack",
+        },
+        {
+            title: "Beef Steak with Fried Potato",
+            rating: 4.9,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Pancake with Honey",
+            rating: 4.7,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Breakfast",
+        },
+        {
+            title: "Japanese Beef Ramen",
+            rating: 4.8,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Mixed Salad",
+            rating: 4.2,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Beef Meatball with Vegetable",
+            rating: 4.5,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Snack",
+        },
+        {
+            title: "Beef Steak with Fried Potato",
+            rating: 4.9,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Pancake with Honey",
+            rating: 4.7,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Breakfast",
+        },
+        {
+            title: "Japanese Beef Ramen",
+            rating: 4.8,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Mixed Salad",
+            rating: 4.2,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Beef Meatball with Vegetable",
+            rating: 4.5,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Snack",
+        },
+        {
+            title: "Beef Steak with Fried Potato",
+            rating: 4.9,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Lunch",
+        },
+        {
+            title: "Pancake with Honey",
+            rating: 4.7,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Breakfast",
+        },
+        {
+            title: "Beef Meatball with Vegetable",
+            rating: 4.5,
+            orders: 1456,
+            interest: 50,
+            orderPercent: 26,
+            type: "Snack",
+        },
+    ];
+
+    function renderFoodList() {
+        view.innerHTML = `
       <h2 class="food_h2">Food</h2>
       <div class="search-section float-end bg-white" style="width:30%">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -479,21 +481,23 @@ const foods = [
       <div class="f-pagination"></div>
     `;
 
-    const food_list_container = document.getElementById("food-list-container");
-    const pagination_container = document.querySelector(".f-pagination");
+        const food_list_container = document.getElementById(
+            "food-list-container"
+        );
+        const pagination_container = document.querySelector(".f-pagination");
 
-    const itemsPerPage = 7;
-    let currentPage = 1;
+        const itemsPerPage = 7;
+        let currentPage = 1;
 
-    function renderPage(pageNumber) {
-      const start = (pageNumber - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
+        function renderPage(pageNumber) {
+            const start = (pageNumber - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
 
-      let html = "";
+            let html = "";
 
-      for (let i = start; i < end && i < foods.length; i++) {
-        const food = foods[i];
-        html += `
+            for (let i = start; i < end && i < foods.length; i++) {
+                const food = foods[i];
+                html += `
           <div class="food-row" style="cursor:pointer;" data-index="${i}">
             <div class="food-icon"></div>
             <p class="food-name">${food.title}</p>
@@ -510,45 +514,47 @@ const foods = [
             <div class="food-percent">${food.orderPercent}%</div>
           </div>
         `;
-      }
+            }
 
-      food_list_container.innerHTML = html;
+            food_list_container.innerHTML = html;
 
-      document.querySelectorAll(".food-row").forEach((row) => {
-        row.addEventListener("click", () => {
-          const index = row.dataset.index;
-          showFoodDetails(foods[index]);
-        });
-      });
+            document.querySelectorAll(".food-row").forEach((row) => {
+                row.addEventListener("click", () => {
+                    const index = row.dataset.index;
+                    showFoodDetails(foods[index]);
+                });
+            });
 
-      renderPagination();
-    }
+            renderPagination();
+        }
 
-    function renderPagination() {
-      const totalPages = Math.ceil(foods.length / itemsPerPage);
-      let buttonsHTML = "";
+        function renderPagination() {
+            const totalPages = Math.ceil(foods.length / itemsPerPage);
+            let buttonsHTML = "";
 
-      for (let i = 1; i <= totalPages; i++) {
-        buttonsHTML += `
-          <button class="page-btn ${i === currentPage ? "active" : ""}" data-page="${i}">${i}</button>
+            for (let i = 1; i <= totalPages; i++) {
+                buttonsHTML += `
+          <button class="page-btn ${
+              i === currentPage ? "active" : ""
+          }" data-page="${i}">${i}</button>
         `;
-      }
+            }
 
-      pagination_container.innerHTML = buttonsHTML;
+            pagination_container.innerHTML = buttonsHTML;
 
-      document.querySelectorAll(".page-btn").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          currentPage = parseInt(e.target.dataset.page);
-          renderPage(currentPage);
-        });
-      });
+            document.querySelectorAll(".page-btn").forEach((btn) => {
+                btn.addEventListener("click", (e) => {
+                    currentPage = parseInt(e.target.dataset.page);
+                    renderPage(currentPage);
+                });
+            });
+        }
+
+        renderPage(currentPage);
     }
 
-    renderPage(currentPage);
-  }
-
-  function showFoodDetails(food) {
-    view.innerHTML = `
+    function showFoodDetails(food) {
+        view.innerHTML = `
       <div class="food-details-page p-4 bg-white rounded shadow">
       <svg width="361" height="239" viewBox="0 0 361 239" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="361" height="239" rx="18" fill="#C1BBEB"/>
@@ -595,25 +601,27 @@ const foods = [
       </div>
     `;
 
-    document.getElementById("back-to-list").addEventListener("click", () => {
-      renderFoodList();
-    });
-  }
+        document
+            .getElementById("back-to-list")
+            .addEventListener("click", () => {
+                renderFoodList();
+            });
+    }
 
-  renderFoodList();
+    renderFoodList();
 });
-
 
 /**teacher */
 
 teacher_li.addEventListener("click", renderTeachersList);
 
-function renderTeachersList(){ document
-    .querySelectorAll("ul li")
-    .forEach((el) => el.classList.remove("active"));
-  teacher_li.classList.add("active");
+function renderTeachersList() {
+    document
+        .querySelectorAll("ul li")
+        .forEach((el) => el.classList.remove("active"));
+    teacher_li.classList.add("active");
 
-  view.innerHTML = `
+    view.innerHTML = `
  <div class="tsidetags">
   <div class="buttons d-inline w-25">
     <button>
@@ -660,1350 +668,1375 @@ function renderTeachersList(){ document
 
   `;
 
-  const teachers = [
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
-    {
-      name: "Alexander Hamilton",
-      field: "Political Science",
-      location: "New York, USA",
-      phone: "+1 555 009102",
-      email: "alexander.hamilton@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Mechanics", "AI Ethics", "Astrophysics", "Cultural Studies"],
-    },
-    {
-      name: "Margaret Kensington",
-      field: "Environmental Studies",
-      location: "Cairo, Egypt",
-      phone: "+1 555 006872",
-      email: "margaret.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Statistics",
-        "Machine Learning",
-        "World History",
-      ],
-    },
-    {
-      name: "Christopher Langford",
-      field: "Modern History",
-      location: "Toronto, Canada",
-      phone: "+1 555 009210",
-      email: "christopher.langford@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: ["Genetics", "Mechanics", "Astrophysics", "World History"],
-    },
-    {
-      name: "Isabella Montgomery",
-      field: "Comparative Literature",
-      location: "Berlin, Germany",
-      phone: "+1 555 001923",
-      email: "isabella.montgomery@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "World History",
-        "Cognitive Science",
-        "Cultural Studies",
-      ],
-    },
-    {
-      name: "Benjamin Whitaker",
-      field: "Applied Mathematics",
-      location: "Tokyo, Japan",
-      phone: "+1 555 007884",
-      email: "benjamin.whitaker@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Mathematics", years: "2013-2015" },
-      ],
-      expertise: [
-        "Statistics",
-        "Machine Learning",
-        "AI Ethics",
-        "Astrophysics",
-      ],
-    },
-    {
-      name: "Catherine Holloway",
-      field: "Human Psychology",
-      location: "Paris, France",
-      phone: "+1 555 008376",
-      email: "catherine.holloway@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Cognitive Science",
-        "Creative Writing",
-        "Philosophy",
-        "Genetics",
-      ],
-    },
-    {
-      name: "Nathaniel Hawthorne",
-      field: "Creative Writing",
-      location: "London, UK",
-      phone: "+1 555 005128",
-      email: "nathaniel.hawthorne@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Literature", years: "2013-2015" },
-      ],
-      expertise: [
-        "Creative Writing",
-        "Ancient Literature",
-        "Cultural Studies",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Elizabeth Fairchild",
-      field: "Biomedical Engineering",
-      location: "Jakarta, Indonesia",
-      phone: "+1 555 002783",
-      email: "elizabeth.fairchild@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Devices",
-        "AI Ethics",
-        "Machine Learning",
-      ],
-    },
-    {
-      name: "Sebastian Kingsley",
-      field: "Astrophysics",
-      location: "Berlin, Germany",
-      phone: "+1 555 009217",
-      email: "sebastian.kingsley@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Astrophysics", "Mechanics", "Quantum Physics", "Statistics"],
-    },
-    {
-      name: "Victoria Wetherby",
-      field: "International Relations",
-      location: "Paris, France",
-      phone: "+1 555 007392",
-      email: "victoria.wetherby@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Political Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "Political Theory",
-        "Cultural Studies",
-        "World History",
-        "Philosophy",
-      ],
-    },
-    {
-      name: "Jonathan Blackwood",
-      field: "Artificial Intelligence",
-      location: "Cairo, Egypt",
-      phone: "+1 555 001529",
-      email: "jonathan.blackwood@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Computer Science", years: "2013-2015" },
-      ],
-      expertise: [
-        "AI Ethics",
-        "Machine Learning",
-        "Statistics",
-        "Cognitive Science",
-      ],
-    },
-    {
-      name: "Penelope Worthington",
-      field: "Philosophy of Science",
-      location: "Toronto, Canada",
-      phone: "+1 555 004658",
-      email: "penelope.worthington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Philosophy", years: "2013-2015" },
-      ],
-      expertise: [
-        "Philosophy",
-        "AI Ethics",
-        "World History",
-        "Ancient Literature",
-      ],
-    },
-    {
-      name: "Frederick Ellington",
-      field: "Ancient Civilizations",
-      location: "Tokyo, Japan",
-      phone: "+1 555 009731",
-      email: "frederick.ellington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of History", years: "2013-2015" },
-      ],
-      expertise: [
-        "Ancient Literature",
-        "Prehistoric",
-        "World History",
-        "Culture",
-      ],
-    },
-    {
-      name: "Charlotte Abernathy",
-      field: "Genetic Biology",
-      location: "London, UK",
-      phone: "+1 555 003613",
-      email: "charlotte.abernathy@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Biology", years: "2013-2015" },
-      ],
-      expertise: [
-        "Genetics",
-        "Biomedical Engineering",
-        "Cognitive Science",
-        "Statistics",
-      ],
-    },
-    {
-      name: "Theodore Kensington",
-      field: "Quantum Mechanics",
-      location: "New York, USA",
-      phone: "+1 555 009994",
-      email: "theodore.kensington@university.edu",
-      about:
-        "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
-      education: [
-        { degree: "Bachelor of Education", years: "2008-2012" },
-        { degree: "Master of Physics", years: "2013-2015" },
-      ],
-      expertise: ["Quantum Physics", "Mechanics", "Astrophysics", "Philosophy"],
-    },
-  ];
+    const teachers = [
+        {
+            name: "Alexander Hamilton",
+            field: "Political Science",
+            location: "New York, USA",
+            phone: "+1 555 009102",
+            email: "alexander.hamilton@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Mechanics",
+                "AI Ethics",
+                "Astrophysics",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Margaret Kensington",
+            field: "Environmental Studies",
+            location: "Cairo, Egypt",
+            phone: "+1 555 006872",
+            email: "margaret.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Statistics",
+                "Machine Learning",
+                "World History",
+            ],
+        },
+        {
+            name: "Christopher Langford",
+            field: "Modern History",
+            location: "Toronto, Canada",
+            phone: "+1 555 009210",
+            email: "christopher.langford@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Mechanics",
+                "Astrophysics",
+                "World History",
+            ],
+        },
+        {
+            name: "Isabella Montgomery",
+            field: "Comparative Literature",
+            location: "Berlin, Germany",
+            phone: "+1 555 001923",
+            email: "isabella.montgomery@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "World History",
+                "Cognitive Science",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Benjamin Whitaker",
+            field: "Applied Mathematics",
+            location: "Tokyo, Japan",
+            phone: "+1 555 007884",
+            email: "benjamin.whitaker@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Statistics",
+                "Machine Learning",
+                "AI Ethics",
+                "Astrophysics",
+            ],
+        },
+        {
+            name: "Catherine Holloway",
+            field: "Human Psychology",
+            location: "Paris, France",
+            phone: "+1 555 008376",
+            email: "catherine.holloway@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Creative Writing",
+                "Philosophy",
+                "Genetics",
+            ],
+        },
+        {
+            name: "Nathaniel Hawthorne",
+            field: "Creative Writing",
+            location: "London, UK",
+            phone: "+1 555 005128",
+            email: "nathaniel.hawthorne@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Literature", years: "2013-2015" },
+            ],
+            expertise: [
+                "Creative Writing",
+                "Ancient Literature",
+                "Cultural Studies",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Elizabeth Fairchild",
+            field: "Biomedical Engineering",
+            location: "Jakarta, Indonesia",
+            phone: "+1 555 002783",
+            email: "elizabeth.fairchild@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Devices",
+                "AI Ethics",
+                "Machine Learning",
+            ],
+        },
+        {
+            name: "Sebastian Kingsley",
+            field: "Astrophysics",
+            location: "Berlin, Germany",
+            phone: "+1 555 009217",
+            email: "sebastian.kingsley@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Astrophysics",
+                "Mechanics",
+                "Quantum Physics",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Victoria Wetherby",
+            field: "International Relations",
+            location: "Paris, France",
+            phone: "+1 555 007392",
+            email: "victoria.wetherby@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Political Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "Political Theory",
+                "Cultural Studies",
+                "World History",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Jonathan Blackwood",
+            field: "Artificial Intelligence",
+            location: "Cairo, Egypt",
+            phone: "+1 555 001529",
+            email: "jonathan.blackwood@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Computer Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "AI Ethics",
+                "Machine Learning",
+                "Statistics",
+                "Cognitive Science",
+            ],
+        },
+        {
+            name: "Penelope Worthington",
+            field: "Philosophy of Science",
+            location: "Toronto, Canada",
+            phone: "+1 555 004658",
+            email: "penelope.worthington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Philosophy", years: "2013-2015" },
+            ],
+            expertise: [
+                "Philosophy",
+                "AI Ethics",
+                "World History",
+                "Ancient Literature",
+            ],
+        },
+        {
+            name: "Frederick Ellington",
+            field: "Ancient Civilizations",
+            location: "Tokyo, Japan",
+            phone: "+1 555 009731",
+            email: "frederick.ellington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "Prehistoric",
+                "World History",
+                "Culture",
+            ],
+        },
+        {
+            name: "Charlotte Abernathy",
+            field: "Genetic Biology",
+            location: "London, UK",
+            phone: "+1 555 003613",
+            email: "charlotte.abernathy@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Engineering",
+                "Cognitive Science",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Theodore Kensington",
+            field: "Quantum Mechanics",
+            location: "New York, USA",
+            phone: "+1 555 009994",
+            email: "theodore.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Quantum Physics",
+                "Mechanics",
+                "Astrophysics",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Alexander Hamilton",
+            field: "Political Science",
+            location: "New York, USA",
+            phone: "+1 555 009102",
+            email: "alexander.hamilton@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Mechanics",
+                "AI Ethics",
+                "Astrophysics",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Margaret Kensington",
+            field: "Environmental Studies",
+            location: "Cairo, Egypt",
+            phone: "+1 555 006872",
+            email: "margaret.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Statistics",
+                "Machine Learning",
+                "World History",
+            ],
+        },
+        {
+            name: "Christopher Langford",
+            field: "Modern History",
+            location: "Toronto, Canada",
+            phone: "+1 555 009210",
+            email: "christopher.langford@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Mechanics",
+                "Astrophysics",
+                "World History",
+            ],
+        },
+        {
+            name: "Isabella Montgomery",
+            field: "Comparative Literature",
+            location: "Berlin, Germany",
+            phone: "+1 555 001923",
+            email: "isabella.montgomery@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "World History",
+                "Cognitive Science",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Benjamin Whitaker",
+            field: "Applied Mathematics",
+            location: "Tokyo, Japan",
+            phone: "+1 555 007884",
+            email: "benjamin.whitaker@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Statistics",
+                "Machine Learning",
+                "AI Ethics",
+                "Astrophysics",
+            ],
+        },
+        {
+            name: "Catherine Holloway",
+            field: "Human Psychology",
+            location: "Paris, France",
+            phone: "+1 555 008376",
+            email: "catherine.holloway@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Creative Writing",
+                "Philosophy",
+                "Genetics",
+            ],
+        },
+        {
+            name: "Nathaniel Hawthorne",
+            field: "Creative Writing",
+            location: "London, UK",
+            phone: "+1 555 005128",
+            email: "nathaniel.hawthorne@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Literature", years: "2013-2015" },
+            ],
+            expertise: [
+                "Creative Writing",
+                "Ancient Literature",
+                "Cultural Studies",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Elizabeth Fairchild",
+            field: "Biomedical Engineering",
+            location: "Jakarta, Indonesia",
+            phone: "+1 555 002783",
+            email: "elizabeth.fairchild@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Devices",
+                "AI Ethics",
+                "Machine Learning",
+            ],
+        },
+        {
+            name: "Sebastian Kingsley",
+            field: "Astrophysics",
+            location: "Berlin, Germany",
+            phone: "+1 555 009217",
+            email: "sebastian.kingsley@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Astrophysics",
+                "Mechanics",
+                "Quantum Physics",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Victoria Wetherby",
+            field: "International Relations",
+            location: "Paris, France",
+            phone: "+1 555 007392",
+            email: "victoria.wetherby@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Political Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "Political Theory",
+                "Cultural Studies",
+                "World History",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Jonathan Blackwood",
+            field: "Artificial Intelligence",
+            location: "Cairo, Egypt",
+            phone: "+1 555 001529",
+            email: "jonathan.blackwood@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Computer Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "AI Ethics",
+                "Machine Learning",
+                "Statistics",
+                "Cognitive Science",
+            ],
+        },
+        {
+            name: "Penelope Worthington",
+            field: "Philosophy of Science",
+            location: "Toronto, Canada",
+            phone: "+1 555 004658",
+            email: "penelope.worthington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Philosophy", years: "2013-2015" },
+            ],
+            expertise: [
+                "Philosophy",
+                "AI Ethics",
+                "World History",
+                "Ancient Literature",
+            ],
+        },
+        {
+            name: "Frederick Ellington",
+            field: "Ancient Civilizations",
+            location: "Tokyo, Japan",
+            phone: "+1 555 009731",
+            email: "frederick.ellington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "Prehistoric",
+                "World History",
+                "Culture",
+            ],
+        },
+        {
+            name: "Charlotte Abernathy",
+            field: "Genetic Biology",
+            location: "London, UK",
+            phone: "+1 555 003613",
+            email: "charlotte.abernathy@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Engineering",
+                "Cognitive Science",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Theodore Kensington",
+            field: "Quantum Mechanics",
+            location: "New York, USA",
+            phone: "+1 555 009994",
+            email: "theodore.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Quantum Physics",
+                "Mechanics",
+                "Astrophysics",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Alexander Hamilton",
+            field: "Political Science",
+            location: "New York, USA",
+            phone: "+1 555 009102",
+            email: "alexander.hamilton@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Mechanics",
+                "AI Ethics",
+                "Astrophysics",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Margaret Kensington",
+            field: "Environmental Studies",
+            location: "Cairo, Egypt",
+            phone: "+1 555 006872",
+            email: "margaret.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Statistics",
+                "Machine Learning",
+                "World History",
+            ],
+        },
+        {
+            name: "Christopher Langford",
+            field: "Modern History",
+            location: "Toronto, Canada",
+            phone: "+1 555 009210",
+            email: "christopher.langford@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Mechanics",
+                "Astrophysics",
+                "World History",
+            ],
+        },
+        {
+            name: "Isabella Montgomery",
+            field: "Comparative Literature",
+            location: "Berlin, Germany",
+            phone: "+1 555 001923",
+            email: "isabella.montgomery@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "World History",
+                "Cognitive Science",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Benjamin Whitaker",
+            field: "Applied Mathematics",
+            location: "Tokyo, Japan",
+            phone: "+1 555 007884",
+            email: "benjamin.whitaker@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Statistics",
+                "Machine Learning",
+                "AI Ethics",
+                "Astrophysics",
+            ],
+        },
+        {
+            name: "Catherine Holloway",
+            field: "Human Psychology",
+            location: "Paris, France",
+            phone: "+1 555 008376",
+            email: "catherine.holloway@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Creative Writing",
+                "Philosophy",
+                "Genetics",
+            ],
+        },
+        {
+            name: "Nathaniel Hawthorne",
+            field: "Creative Writing",
+            location: "London, UK",
+            phone: "+1 555 005128",
+            email: "nathaniel.hawthorne@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Literature", years: "2013-2015" },
+            ],
+            expertise: [
+                "Creative Writing",
+                "Ancient Literature",
+                "Cultural Studies",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Elizabeth Fairchild",
+            field: "Biomedical Engineering",
+            location: "Jakarta, Indonesia",
+            phone: "+1 555 002783",
+            email: "elizabeth.fairchild@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Devices",
+                "AI Ethics",
+                "Machine Learning",
+            ],
+        },
+        {
+            name: "Sebastian Kingsley",
+            field: "Astrophysics",
+            location: "Berlin, Germany",
+            phone: "+1 555 009217",
+            email: "sebastian.kingsley@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Astrophysics",
+                "Mechanics",
+                "Quantum Physics",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Victoria Wetherby",
+            field: "International Relations",
+            location: "Paris, France",
+            phone: "+1 555 007392",
+            email: "victoria.wetherby@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Political Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "Political Theory",
+                "Cultural Studies",
+                "World History",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Jonathan Blackwood",
+            field: "Artificial Intelligence",
+            location: "Cairo, Egypt",
+            phone: "+1 555 001529",
+            email: "jonathan.blackwood@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Computer Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "AI Ethics",
+                "Machine Learning",
+                "Statistics",
+                "Cognitive Science",
+            ],
+        },
+        {
+            name: "Penelope Worthington",
+            field: "Philosophy of Science",
+            location: "Toronto, Canada",
+            phone: "+1 555 004658",
+            email: "penelope.worthington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Philosophy", years: "2013-2015" },
+            ],
+            expertise: [
+                "Philosophy",
+                "AI Ethics",
+                "World History",
+                "Ancient Literature",
+            ],
+        },
+        {
+            name: "Frederick Ellington",
+            field: "Ancient Civilizations",
+            location: "Tokyo, Japan",
+            phone: "+1 555 009731",
+            email: "frederick.ellington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "Prehistoric",
+                "World History",
+                "Culture",
+            ],
+        },
+        {
+            name: "Charlotte Abernathy",
+            field: "Genetic Biology",
+            location: "London, UK",
+            phone: "+1 555 003613",
+            email: "charlotte.abernathy@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Engineering",
+                "Cognitive Science",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Theodore Kensington",
+            field: "Quantum Mechanics",
+            location: "New York, USA",
+            phone: "+1 555 009994",
+            email: "theodore.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Quantum Physics",
+                "Mechanics",
+                "Astrophysics",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Alexander Hamilton",
+            field: "Political Science",
+            location: "New York, USA",
+            phone: "+1 555 009102",
+            email: "alexander.hamilton@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Mechanics",
+                "AI Ethics",
+                "Astrophysics",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Margaret Kensington",
+            field: "Environmental Studies",
+            location: "Cairo, Egypt",
+            phone: "+1 555 006872",
+            email: "margaret.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Statistics",
+                "Machine Learning",
+                "World History",
+            ],
+        },
+        {
+            name: "Christopher Langford",
+            field: "Modern History",
+            location: "Toronto, Canada",
+            phone: "+1 555 009210",
+            email: "christopher.langford@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Mechanics",
+                "Astrophysics",
+                "World History",
+            ],
+        },
+        {
+            name: "Isabella Montgomery",
+            field: "Comparative Literature",
+            location: "Berlin, Germany",
+            phone: "+1 555 001923",
+            email: "isabella.montgomery@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "World History",
+                "Cognitive Science",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Benjamin Whitaker",
+            field: "Applied Mathematics",
+            location: "Tokyo, Japan",
+            phone: "+1 555 007884",
+            email: "benjamin.whitaker@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Statistics",
+                "Machine Learning",
+                "AI Ethics",
+                "Astrophysics",
+            ],
+        },
+        {
+            name: "Catherine Holloway",
+            field: "Human Psychology",
+            location: "Paris, France",
+            phone: "+1 555 008376",
+            email: "catherine.holloway@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Creative Writing",
+                "Philosophy",
+                "Genetics",
+            ],
+        },
+        {
+            name: "Nathaniel Hawthorne",
+            field: "Creative Writing",
+            location: "London, UK",
+            phone: "+1 555 005128",
+            email: "nathaniel.hawthorne@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Literature", years: "2013-2015" },
+            ],
+            expertise: [
+                "Creative Writing",
+                "Ancient Literature",
+                "Cultural Studies",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Elizabeth Fairchild",
+            field: "Biomedical Engineering",
+            location: "Jakarta, Indonesia",
+            phone: "+1 555 002783",
+            email: "elizabeth.fairchild@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Devices",
+                "AI Ethics",
+                "Machine Learning",
+            ],
+        },
+        {
+            name: "Sebastian Kingsley",
+            field: "Astrophysics",
+            location: "Berlin, Germany",
+            phone: "+1 555 009217",
+            email: "sebastian.kingsley@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Astrophysics",
+                "Mechanics",
+                "Quantum Physics",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Victoria Wetherby",
+            field: "International Relations",
+            location: "Paris, France",
+            phone: "+1 555 007392",
+            email: "victoria.wetherby@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Political Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "Political Theory",
+                "Cultural Studies",
+                "World History",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Jonathan Blackwood",
+            field: "Artificial Intelligence",
+            location: "Cairo, Egypt",
+            phone: "+1 555 001529",
+            email: "jonathan.blackwood@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Computer Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "AI Ethics",
+                "Machine Learning",
+                "Statistics",
+                "Cognitive Science",
+            ],
+        },
+        {
+            name: "Penelope Worthington",
+            field: "Philosophy of Science",
+            location: "Toronto, Canada",
+            phone: "+1 555 004658",
+            email: "penelope.worthington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Philosophy", years: "2013-2015" },
+            ],
+            expertise: [
+                "Philosophy",
+                "AI Ethics",
+                "World History",
+                "Ancient Literature",
+            ],
+        },
+        {
+            name: "Frederick Ellington",
+            field: "Ancient Civilizations",
+            location: "Tokyo, Japan",
+            phone: "+1 555 009731",
+            email: "frederick.ellington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "Prehistoric",
+                "World History",
+                "Culture",
+            ],
+        },
+        {
+            name: "Charlotte Abernathy",
+            field: "Genetic Biology",
+            location: "London, UK",
+            phone: "+1 555 003613",
+            email: "charlotte.abernathy@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Engineering",
+                "Cognitive Science",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Theodore Kensington",
+            field: "Quantum Mechanics",
+            location: "New York, USA",
+            phone: "+1 555 009994",
+            email: "theodore.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Quantum Physics",
+                "Mechanics",
+                "Astrophysics",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Alexander Hamilton",
+            field: "Political Science",
+            location: "New York, USA",
+            phone: "+1 555 009102",
+            email: "alexander.hamilton@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Mechanics",
+                "AI Ethics",
+                "Astrophysics",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Margaret Kensington",
+            field: "Environmental Studies",
+            location: "Cairo, Egypt",
+            phone: "+1 555 006872",
+            email: "margaret.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Statistics",
+                "Machine Learning",
+                "World History",
+            ],
+        },
+        {
+            name: "Christopher Langford",
+            field: "Modern History",
+            location: "Toronto, Canada",
+            phone: "+1 555 009210",
+            email: "christopher.langford@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Mechanics",
+                "Astrophysics",
+                "World History",
+            ],
+        },
+        {
+            name: "Isabella Montgomery",
+            field: "Comparative Literature",
+            location: "Berlin, Germany",
+            phone: "+1 555 001923",
+            email: "isabella.montgomery@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "World History",
+                "Cognitive Science",
+                "Cultural Studies",
+            ],
+        },
+        {
+            name: "Benjamin Whitaker",
+            field: "Applied Mathematics",
+            location: "Tokyo, Japan",
+            phone: "+1 555 007884",
+            email: "benjamin.whitaker@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Mathematics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Statistics",
+                "Machine Learning",
+                "AI Ethics",
+                "Astrophysics",
+            ],
+        },
+        {
+            name: "Catherine Holloway",
+            field: "Human Psychology",
+            location: "Paris, France",
+            phone: "+1 555 008376",
+            email: "catherine.holloway@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Cognitive Science",
+                "Creative Writing",
+                "Philosophy",
+                "Genetics",
+            ],
+        },
+        {
+            name: "Nathaniel Hawthorne",
+            field: "Creative Writing",
+            location: "London, UK",
+            phone: "+1 555 005128",
+            email: "nathaniel.hawthorne@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Literature", years: "2013-2015" },
+            ],
+            expertise: [
+                "Creative Writing",
+                "Ancient Literature",
+                "Cultural Studies",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Elizabeth Fairchild",
+            field: "Biomedical Engineering",
+            location: "Jakarta, Indonesia",
+            phone: "+1 555 002783",
+            email: "elizabeth.fairchild@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Devices",
+                "AI Ethics",
+                "Machine Learning",
+            ],
+        },
+        {
+            name: "Sebastian Kingsley",
+            field: "Astrophysics",
+            location: "Berlin, Germany",
+            phone: "+1 555 009217",
+            email: "sebastian.kingsley@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Astrophysics",
+                "Mechanics",
+                "Quantum Physics",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Victoria Wetherby",
+            field: "International Relations",
+            location: "Paris, France",
+            phone: "+1 555 007392",
+            email: "victoria.wetherby@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Political Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "Political Theory",
+                "Cultural Studies",
+                "World History",
+                "Philosophy",
+            ],
+        },
+        {
+            name: "Jonathan Blackwood",
+            field: "Artificial Intelligence",
+            location: "Cairo, Egypt",
+            phone: "+1 555 001529",
+            email: "jonathan.blackwood@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Computer Science", years: "2013-2015" },
+            ],
+            expertise: [
+                "AI Ethics",
+                "Machine Learning",
+                "Statistics",
+                "Cognitive Science",
+            ],
+        },
+        {
+            name: "Penelope Worthington",
+            field: "Philosophy of Science",
+            location: "Toronto, Canada",
+            phone: "+1 555 004658",
+            email: "penelope.worthington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Philosophy", years: "2013-2015" },
+            ],
+            expertise: [
+                "Philosophy",
+                "AI Ethics",
+                "World History",
+                "Ancient Literature",
+            ],
+        },
+        {
+            name: "Frederick Ellington",
+            field: "Ancient Civilizations",
+            location: "Tokyo, Japan",
+            phone: "+1 555 009731",
+            email: "frederick.ellington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of History", years: "2013-2015" },
+            ],
+            expertise: [
+                "Ancient Literature",
+                "Prehistoric",
+                "World History",
+                "Culture",
+            ],
+        },
+        {
+            name: "Charlotte Abernathy",
+            field: "Genetic Biology",
+            location: "London, UK",
+            phone: "+1 555 003613",
+            email: "charlotte.abernathy@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Biology", years: "2013-2015" },
+            ],
+            expertise: [
+                "Genetics",
+                "Biomedical Engineering",
+                "Cognitive Science",
+                "Statistics",
+            ],
+        },
+        {
+            name: "Theodore Kensington",
+            field: "Quantum Mechanics",
+            location: "New York, USA",
+            phone: "+1 555 009994",
+            email: "theodore.kensington@university.edu",
+            about: "Passionate educator with years of experience inspiring students through modern teaching strategies and real-world examples.",
+            education: [
+                { degree: "Bachelor of Education", years: "2008-2012" },
+                { degree: "Master of Physics", years: "2013-2015" },
+            ],
+            expertise: [
+                "Quantum Physics",
+                "Mechanics",
+                "Astrophysics",
+                "Philosophy",
+            ],
+        },
+    ];
 
-  const teachers_list_container = document.getElementById(
-    "teachers-list-container"
-  );
-  const pagination_container = document.querySelector(".-pagination");
+    const teachers_list_container = document.getElementById(
+        "teachers-list-container"
+    );
+    const pagination_container = document.querySelector(".-pagination");
 
-  const itemsPerPage = 20;
-  let currentPage = 1;
+    const itemsPerPage = 20;
+    let currentPage = 1;
 
-  function renderPage(pageNumber) {
-    const start = (pageNumber - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
+    function renderPage(pageNumber) {
+        const start = (pageNumber - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
 
-    let html = "";
+        let html = "";
 
-    for (let i = start; i < end && i < teachers.length; i++) {
-      html += `
+        for (let i = start; i < end && i < teachers.length; i++) {
+            html += `
       <div class="teacher_card" data-index="${i}">
         <div class="teacher_icon"></div>
         <p class="teacher-name">${teachers[i].name}</p>
@@ -2018,32 +2051,32 @@ function renderTeachersList(){ document
         </div>
       </div>
     `;
+        }
+
+        teachers_list_container.innerHTML = html;
+
+        document.querySelectorAll(".teacher_card").forEach((card) => {
+            card.addEventListener("click", () => {
+                const index = card.dataset.index;
+                showTeacherDetails(teachers[index]);
+            });
+        });
+
+        renderPagination();
     }
 
-    teachers_list_container.innerHTML = html;
+    function showTeacherDetails(teacher) {
+        view.innerHTML = "";
+        pagination_container.innerHTML = "";
 
-    document.querySelectorAll(".teacher_card").forEach((card) => {
-      card.addEventListener("click", () => {
-        const index = card.dataset.index;
-        showTeacherDetails(teachers[index]);
-      });
-    });
+        const educationHTML = teacher.education
+            .map((e) => `<li>${e.degree} <span>(${e.years})</span></li>`)
+            .join("");
+        const expertiseHTML = teacher.expertise
+            .map((skill) => `<span class="tag">${skill}</span>`)
+            .join("");
 
-    renderPagination();
-  }
-
-  function showTeacherDetails(teacher) {
-    view.innerHTML = "";
-    pagination_container.innerHTML = "";
-
-    const educationHTML = teacher.education
-      .map((e) => `<li>${e.degree} <span>(${e.years})</span></li>`)
-      .join("");
-    const expertiseHTML = teacher.expertise
-      .map((skill) => `<span class="tag">${skill}</span>`)
-      .join("");
-
-    view.innerHTML = `
+        view.innerHTML = `
     <div class="teacher-details bg-white p-4 rounded shadow-sm">
   <!-- Left side: Main info -->
   <div class="" style="min-width: 0;">
@@ -2157,38 +2190,36 @@ March 20, 2021
   </div>
 
   `;
-  }
+    }
 
-  function renderPagination() {
-    const totalPages = Math.ceil(teachers.length / itemsPerPage);
-    let buttonsHTML = "";
+    function renderPagination() {
+        const totalPages = Math.ceil(teachers.length / itemsPerPage);
+        let buttonsHTML = "";
 
-    for (let i = 1; i <= totalPages; i++) {
-      buttonsHTML += `
+        for (let i = 1; i <= totalPages; i++) {
+            buttonsHTML += `
         <button class="page-btn ${
-          i === currentPage ? "active" : ""
+            i === currentPage ? "active" : ""
         }" data-page="${i}">
           ${i}
         </button>
       `;
+        }
+
+        pagination_container.innerHTML = buttonsHTML;
+
+        document.querySelectorAll(".page-btn").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                currentPage = parseInt(e.target.dataset.page);
+                renderPage(currentPage);
+            });
+        });
     }
 
-    pagination_container.innerHTML = buttonsHTML;
+    renderPage(currentPage);
 
-    document.querySelectorAll(".page-btn").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        currentPage = parseInt(e.target.dataset.page);
-        renderPage(currentPage);
-      });
-    });
-  }
-
-  renderPage(currentPage);
-
-
-
-document.querySelector(".add-new-teacher").addEventListener("click", () => {
-  view.innerHTML = `
+    document.querySelector(".add-new-teacher").addEventListener("click", () => {
+        view.innerHTML = `
   <div class="tsidetags">
   <div class="buttons d-inline w-25">
     <button>
@@ -2288,295 +2319,334 @@ document.querySelector(".add-new-teacher").addEventListener("click", () => {
     </div>
   `;
 
-  document.getElementById("submit-teacher").addEventListener("click", submitNewTeacher);
-});
+        document
+            .getElementById("submit-teacher")
+            .addEventListener("click", submitNewTeacher);
+    });
 
+    function submitNewTeacher() {
+        const firstName = document
+            .getElementById("teacher-firstname")
+            .value.trim();
+        const lastName = document
+            .getElementById("teacher-lastname")
+            .value.trim();
+        const email = document.getElementById("teacher-email").value.trim();
+        const phone = document.getElementById("teacher-phone").value.trim();
+        const address = document.getElementById("teacher-address").value.trim();
+        const dob = document.getElementById("teacher-dob").value.trim();
+        const birthplace = document
+            .getElementById("teacher-birthplace")
+            .value.trim();
+        const university = document
+            .getElementById("teacher-university")
+            .value.trim();
+        const degree = document.getElementById("teacher-degree").value.trim();
+        const startDate = document.getElementById("teacher-start").value.trim();
+        const endDate = document.getElementById("teacher-end").value.trim();
+        const city = document.getElementById("teacher-city").value.trim();
 
-function submitNewTeacher() {
-  const firstName = document.getElementById("teacher-firstname").value.trim();
-  const lastName = document.getElementById("teacher-lastname").value.trim();
-  const email = document.getElementById("teacher-email").value.trim();
-  const phone = document.getElementById("teacher-phone").value.trim();
-  const address = document.getElementById("teacher-address").value.trim();
-  const dob = document.getElementById("teacher-dob").value.trim();
-  const birthplace = document.getElementById("teacher-birthplace").value.trim();
-  const university = document.getElementById("teacher-university").value.trim();
-  const degree = document.getElementById("teacher-degree").value.trim();
-  const startDate = document.getElementById("teacher-start").value.trim();
-  const endDate = document.getElementById("teacher-end").value.trim();
-  const city = document.getElementById("teacher-city").value.trim();
+        if (!firstName || !lastName || !email) {
+            alert("Please fill in all required fields.");
+            return;
+        }
 
-  if (!firstName || !lastName || !email) {
-    alert("Please fill in all required fields.");
-    return;
-  }
+        const newTeacher = {
+            name: `${firstName} ${lastName}`,
+            email,
+            phone,
+            address,
+            dob,
+            birthplace,
+            university,
+            degree,
+            startDate,
+            endDate,
+            city,
+        };
 
-  const newTeacher = {
-    name: `${firstName} ${lastName}`,
-    email,
-    phone,
-    address,
-    dob,
-    birthplace,
-    university,
-    degree,
-    startDate,
-    endDate,
-    city
-  };
-
-  teachers.push(newTeacher);
-  console.log(teachers);
-    alert("Teacher added successfully!");
-renderTeachersList(); 
-  
-}}
+        teachers.push(newTeacher);
+        console.log(teachers);
+        alert("Teacher added successfully!");
+        renderTeachersList();
+    }
+}
 
 //**************************************************************************dashboard js************************************************* */
 
 /***********************chart*********************** */
 
 (function () {
-  const ctx = document.getElementById("myChart").getContext("2d");
+    const ctx = document.getElementById("myChart").getContext("2d");
 
-  // Gradient for first line
-  const gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
-  gradient1.addColorStop(0, "rgba(251, 125, 91, 0.4)");
-  gradient1.addColorStop(1, "rgba(251, 125, 91, 0)");
+    // Gradient for first line
+    const gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
+    gradient1.addColorStop(0, "rgba(251, 125, 91, 0.4)");
+    gradient1.addColorStop(1, "rgba(251, 125, 91, 0)");
 
-  // Gradient for second line
-  const gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
-  gradient2.addColorStop(0, "rgba(252, 196, 62, 0.4)");
-  gradient2.addColorStop(1, "rgba(252, 196, 62, 0)");
+    // Gradient for second line
+    const gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+    gradient2.addColorStop(0, "rgba(252, 196, 62, 0.4)");
+    gradient2.addColorStop(1, "rgba(252, 196, 62, 0)");
 
-  new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ],
-      datasets: [
-        {
-          label: "Last Week",
-          data: [10, 20, 35, 40, 30, 25, 50, 60, 45, 70, 55, 80],
-          borderColor: "rgba(251, 125, 91, 1)",
-          backgroundColor: gradient1,
-          tension: 0.4,
-          fill: true,
+    new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ],
+            datasets: [
+                {
+                    label: "Last Week",
+                    data: [10, 20, 35, 40, 30, 25, 50, 60, 45, 70, 55, 80],
+                    borderColor: "rgba(251, 125, 91, 1)",
+                    backgroundColor: gradient1,
+                    tension: 0.4,
+                    fill: true,
+                },
+                {
+                    label: "This Week",
+                    data: [15, 25, 20, 35, 45, 40, 60, 55, 65, 75, 85, 90],
+                    borderColor: "rgba(252, 196, 62, 1)",
+                    backgroundColor: gradient2,
+                    tension: 0.4,
+                    fill: true,
+                },
+            ],
         },
-        {
-          label: "This Week",
-          data: [15, 25, 20, 35, 45, 40, 60, 55, 65, 75, 85, 90],
-          borderColor: "rgba(252, 196, 62, 1)",
-          backgroundColor: gradient2,
-          tension: 0.4,
-          fill: true,
+        options: {
+            scales: {
+                x: {
+                    grid: {
+                        display: true,
+                        drawOnChartArea: true,
+                        drawTicks: false,
+                        color: "rgba(0,0,0,0.05)",
+                    },
+                },
+                y: {
+                    grid: {
+                        display: false,
+                    },
+                    ticks: {
+                        stepSize: 25,
+                        beginAtZero: true,
+                        max: 100,
+                    },
+                },
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: "top",
+                    align: "end",
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: "circle",
+                        boxWidth: 10,
+                        padding: 20,
+                    },
+                },
+            },
         },
-      ],
-    },
-    options: {
-      scales: {
-        x: {
-          grid: {
-            display: true,
-            drawOnChartArea: true,
-            drawTicks: false,
-            color: "rgba(0,0,0,0.05)",
-          },
-        },
-        y: {
-          grid: {
-            display: false,
-          },
-          ticks: {
-            stepSize: 25,
-            beginAtZero: true,
-            max: 100,
-          },
-        },
-      },
-      plugins: {
-        legend: {
-          display: true,
-          position: "top",
-          align: "end",
-          labels: {
-            usePointStyle: true,
-            pointStyle: "circle",
-            boxWidth: 10,
-            padding: 20,
-          },
-        },
-      },
-    },
-  });
+    });
 })();
 /*********************sec char********************** */
 (function () {
-  const barCtx = document.getElementById("barChart").getContext("2d");
+    const barCtx = document.getElementById("barChart").getContext("2d");
 
-  const days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+    const days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
 
-  // Gradient colors
-  const grad1 = barCtx.createLinearGradient(0, 0, 0, 300);
-  grad1.addColorStop(0, "rgb(251, 125, 91)");
-  grad1.addColorStop(1, "rgb(251, 125, 91)");
+    // Gradient colors
+    const grad1 = barCtx.createLinearGradient(0, 0, 0, 300);
+    grad1.addColorStop(0, "rgb(251, 125, 91)");
+    grad1.addColorStop(1, "rgb(251, 125, 91)");
 
-  const grad2 = barCtx.createLinearGradient(0, 0, 0, 300);
-  grad2.addColorStop(0, "rgb(252, 196, 62)");
-  grad2.addColorStop(1, "rgb(252, 196, 62)");
+    const grad2 = barCtx.createLinearGradient(0, 0, 0, 300);
+    grad2.addColorStop(0, "rgb(252, 196, 62)");
+    grad2.addColorStop(1, "rgb(252, 196, 62)");
 
-  new Chart(barCtx, {
-    type: "bar",
-    data: {
-      labels: days,
-      datasets: [
-        {
-          label: "Last Week",
-          data: [10, 20, 35, 40, 30, 25, 50],
-          backgroundColor: grad1,
-          borderRadius: 5,
-          barThickness: 10,
+    new Chart(barCtx, {
+        type: "bar",
+        data: {
+            labels: days,
+            datasets: [
+                {
+                    label: "Last Week",
+                    data: [10, 20, 35, 40, 30, 25, 50],
+                    backgroundColor: grad1,
+                    borderRadius: 5,
+                    barThickness: 10,
+                },
+                {
+                    label: "This Week",
+                    data: [15, 25, 20, 35, 45, 40, 60],
+                    backgroundColor: grad2,
+                    borderRadius: 5,
+                    barThickness: 10,
+                },
+            ],
         },
-        {
-          label: "This Week",
-          data: [15, 25, 20, 35, 45, 40, 60],
-          backgroundColor: grad2,
-          borderRadius: 5,
-          barThickness: 10,
+        options: {
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                    },
+                },
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 20,
+                    },
+                    grid: {
+                        display: true,
+                        color: "rgba(0,0,0,0.05)",
+                    },
+                },
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: "top",
+                    align: "end",
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: "circle",
+                    },
+                },
+            },
         },
-      ],
-    },
-    options: {
-      scales: {
-        x: {
-          grid: {
-            display: false,
-          },
-        },
-        y: {
-          beginAtZero: true,
-          max: 100,
-          ticks: {
-            stepSize: 20,
-          },
-          grid: {
-            display: true,
-            color: "rgba(0,0,0,0.05)",
-          },
-        },
-      },
-      plugins: {
-        legend: {
-          display: true,
-          position: "top",
-          align: "end",
-          labels: {
-            usePointStyle: true,
-            pointStyle: "circle",
-          },
-        },
-      },
-    },
-  });
+    });
 })();
 /****************calender****************** */
 (function () {
-  document.addEventListener("DOMContentLoaded", function () {
-    const calendarEl = document.getElementById("calendar");
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: "dayGridMonth",
-      headerToolbar: {
-        left: "title",
-        right: "prev,next",
-      },
-      events: [
-        {
-          title: "Important",
-          start: "2021-03-08",
-          color: "white",
-          className: "fc-event-important",
-        },
-      ],
-    });
+    document.addEventListener("DOMContentLoaded", function () {
+        const calendarEl = document.getElementById("calendar");
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: "dayGridMonth",
+            headerToolbar: {
+                left: "title",
+                right: "prev,next",
+            },
+            events: [
+                {
+                    title: "Important",
+                    start: "2021-03-08",
+                    color: "white",
+                    className: "fc-event-important",
+                },
+            ],
+        });
 
-    calendar.render();
-  });
+        calendar.render();
+    });
 })();
 /*************************table************************************ */
 (function () {
-  const students = [
-    {
-      name: "Samantha William",
-      id: "123456789",
-      class: "VII A",
-      fees: "$50,036",
-    },
-    { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
-    { name: "Jordan Nico", id: "123456789", class: "VII A", fees: "$50,036" },
-    { name: "Karen Hope", id: "123456789", class: "VII A", fees: "$50,036" },
+    const students = [
+        {
+            name: "Samantha William",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
+        { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
+        {
+            name: "Jordan Nico",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
+        {
+            name: "Karen Hope",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
 
-    {
-      name: "Samantha William",
-      id: "123456789",
-      class: "VII A",
-      fees: "$50,036",
-    },
-    { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
-    { name: "Jordan Nico", id: "123456789", class: "VII A", fees: "$50,036" },
-    { name: "Karen Hope", id: "123456789", class: "VII A", fees: "$50,036" },
+        {
+            name: "Samantha William",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
+        { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
+        {
+            name: "Jordan Nico",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
+        {
+            name: "Karen Hope",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
 
-    {
-      name: "Samantha William",
-      id: "123456789",
-      class: "VII A",
-      fees: "$50,036",
-    },
-    { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
-    { name: "Jordan Nico", id: "123456789", class: "VII A", fees: "$50,036" },
-    { name: "Karen Hope", id: "123456789", class: "VII A", fees: "$50,036" },
+        {
+            name: "Samantha William",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
+        { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
+        {
+            name: "Jordan Nico",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
+        {
+            name: "Karen Hope",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
 
-    {
-      name: "Samantha William",
-      id: "123456789",
-      class: "VII A",
-      fees: "$50,036",
-    },
-    { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
-  ];
+        {
+            name: "Samantha William",
+            id: "123456789",
+            class: "VII A",
+            fees: "$50,036",
+        },
+        { name: "Tony Soap", id: "123456789", class: "VII A", fees: "$50,036" },
+    ];
 
-  const itemsPerPage = 4;
-  const unpaid_grid = document.getElementById("unpaid_grid");
-  const pagination = document.getElementById("pagination");
+    const itemsPerPage = 4;
+    const unpaid_grid = document.getElementById("unpaid_grid");
+    const pagination = document.getElementById("pagination");
 
-  unpaid_grid.innerHTML = `
+    unpaid_grid.innerHTML = `
     <table id="students-table">
      
       <tbody></tbody>
     </table>
   `;
 
-  const tableBody = document.querySelector("#students-table tbody");
+    const tableBody = document.querySelector("#students-table tbody");
 
-  function showPage(pageNumber) {
-    const start = pageNumber * itemsPerPage;
-    const end = start + itemsPerPage;
-    const visibleStudents = students.slice(start, end);
+    function showPage(pageNumber) {
+        const start = pageNumber * itemsPerPage;
+        const end = start + itemsPerPage;
+        const visibleStudents = students.slice(start, end);
 
-    tableBody.innerHTML = visibleStudents
-      .map(
-        (student) => `
+        tableBody.innerHTML = visibleStudents
+            .map(
+                (student) => `
       <tr>
         <td><div class="table-icon"></div></td>
         <td>${student.name}</td>
@@ -2588,30 +2658,30 @@ renderTeachersList();
         <td>...</td>
       </tr>
     `
-      )
-      .join("");
+            )
+            .join("");
 
-    // Update active button
-    document.querySelectorAll(".page-btn").forEach((btn, index) => {
-      btn.classList.toggle("active", index === pageNumber);
-    });
-  }
-
-  function setupPagination() {
-    const pageCount = Math.ceil(students.length / itemsPerPage);
-    pagination.innerHTML = "";
-
-    for (let i = 0; i < pageCount; i++) {
-      const btn = document.createElement("button");
-      btn.innerText = i + 1;
-      btn.classList.add("page-btn");
-      btn.addEventListener("click", () => showPage(i));
-      pagination.appendChild(btn);
+        // Update active button
+        document.querySelectorAll(".page-btn").forEach((btn, index) => {
+            btn.classList.toggle("active", index === pageNumber);
+        });
     }
 
-    showPage(0); // Show first page
-    pagination.querySelector(".page-btn").classList.add("active");
-  }
+    function setupPagination() {
+        const pageCount = Math.ceil(students.length / itemsPerPage);
+        pagination.innerHTML = "";
 
-  setupPagination();
+        for (let i = 0; i < pageCount; i++) {
+            const btn = document.createElement("button");
+            btn.innerText = i + 1;
+            btn.classList.add("page-btn");
+            btn.addEventListener("click", () => showPage(i));
+            pagination.appendChild(btn);
+        }
+
+        showPage(0); // Show first page
+        pagination.querySelector(".page-btn").classList.add("active");
+    }
+
+    setupPagination();
 })();

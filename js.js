@@ -1,5 +1,5 @@
 let student_html = `
-  <div class="container">
+  <div class="container y-container">
         <div class="first-div">
             <div><h1>Student</h1></div>
             <div class="notifications">
@@ -219,14 +219,14 @@ let student_html = `
     </div>
 `;
 student_li.addEventListener("click", function () {
-  document.querySelectorAll("ul li").forEach((el) => {
-    el.classList.remove("active");
-  });
-  student_li.classList.add("active");
-  view.innerHTML = student_html;
+    document.querySelectorAll("ul li").forEach((el) => {
+        el.classList.remove("active");
+    });
+    student_li.classList.add("active");
+    view.innerHTML = student_html;
 });
- let student_details_html =`
-  <div class="container">
+let student_details_html = `
+  <div class="container y-container">
       <div class="first-div">
         <div><h1>Student Details</h1></div>
         <div class="notifications">
@@ -517,7 +517,7 @@ student_li.addEventListener("click", function () {
         </div>
       </div>
     </div>
- `
+ `;
 /*student_details_li.addEventListener("click", function () {
   document.querySelectorAll("ul li").forEach((el) => {
     el.classList.remove("active");
@@ -526,8 +526,8 @@ student_li.addEventListener("click", function () {
   view.innerHTML = student_details_html;
 });*/
 
-let finance_html=`
-<div  class="p-5">
+let finance_html = `
+<div  class="p-5 y-container">
       <div class="header ">
         <div > <h1>Finance</h1></div>
         <div  class="d-flex gap-3">
@@ -593,7 +593,7 @@ let finance_html=`
             </div>
             </div>
             <div class="graph-draw">
-                <canvas id="myChart"></canvas>
+                <canvas id="myChartFinance"></canvas>
             </div>
       </div>
       <div class="fourth-div">
@@ -775,16 +775,62 @@ let finance_html=`
 
       </div>
     </div>
-`
+    
+`;
 finance_li.addEventListener("click", function () {
-  document.querySelectorAll("ul li").forEach((el) => {
-    el.classList.remove("active");
-  });
-  finance_li.classList.add("active");
-  view.innerHTML = student_html;
+    console.log("HAHAHA");
+    document.querySelectorAll("ul li").forEach((el) => {
+        el.classList.remove("active");
+    });
+    finance_li.classList.add("active");
+    view.innerHTML = finance_html;
+    const ctx = document.getElementById("myChartFinance").getContext("2d");
+
+    const myChartFinance = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+            ],
+            datasets: [
+                {
+                    label: "نسبة الإنجاز",
+                    data: [10, 20, 30, 45, 50, 60, 65, 75, 85, 90, 95, 100],
+                    fill: false,
+                    borderColor: "#FB7D5B",
+                    tension: 0.4,
+                    pointBackgroundColor: "#4d44b5",
+                    pointRadius: 5,
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 25,
+                    },
+                },
+            },
+        },
+    });
 });
-let chat_html=`
-<div class="container-chat">
+let chat_html = `
+<div class="container-chat y-container">
     <div class="first-div">
         <div><h1>Chat</h1></div>
         <div class="header-left-side">
@@ -960,11 +1006,11 @@ together to finish homework? </p></div>
         </div>
       </div>
    </div>
-`
+`;
 chat_li.addEventListener("click", function () {
-  document.querySelectorAll("ul li").forEach((el) => {
-    el.classList.remove("active");
-  });
-  chat_li.classList.add("active");
-  view.innerHTML = chat_html;
+    document.querySelectorAll("ul li").forEach((el) => {
+        el.classList.remove("active");
+    });
+    chat_li.classList.add("active");
+    view.innerHTML = chat_html;
 });
