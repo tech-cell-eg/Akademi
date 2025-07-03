@@ -232,6 +232,9 @@ dashboard_li.addEventListener("click", function () {
   dashboard_li.classList.add("active");
 
   view.innerHTML = dashboard_html;
+  chart1();
+  chart2();
+  cal();
 });
 
 /**food */ 
@@ -2336,7 +2339,8 @@ renderTeachersList();
 
 /***********************chart*********************** */
 
-(function () {
+
+  function chart1(){
   const ctx = document.getElementById("myChart").getContext("2d");
 
   // Gradient for first line
@@ -2421,9 +2425,9 @@ renderTeachersList();
       },
     },
   });
-})();
+}chart1()
 /*********************sec char********************** */
-(function () {
+function chart2() {
   const barCtx = document.getElementById("barChart").getContext("2d");
 
   const days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -2490,9 +2494,9 @@ renderTeachersList();
       },
     },
   });
-})();
+};chart2(),
 /****************calender****************** */
-(function () {
+function cal() {
   document.addEventListener("DOMContentLoaded", function () {
     const calendarEl = document.getElementById("calendar");
     const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -2513,7 +2517,7 @@ renderTeachersList();
 
     calendar.render();
   });
-})();
+};cal();
 /*************************table************************************ */
 (function () {
   const students = [
