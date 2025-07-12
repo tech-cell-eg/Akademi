@@ -604,6 +604,13 @@ list-style-type: disc !important;
 margin-block: 1vh;
 }
 /***************new teacher*************************/
+.add-teacher-form h3{
+    margin-inline-start: 5vw;
+}
+.add-teacher-form .tsidetags {
+ 
+    margin-inline-end: 14vw;
+}
 .personal-details ,.education-details{
     margin-left: 5vw;
     width: 76%;
@@ -628,12 +635,13 @@ margin-block: 1vh;
     width: 45%;
     display: inline-block;
 }
-.personal-details input ,.education-details input ,.personal-details textarea{
+
+.personal-details input, .education-details input, .personal-details textarea {
     border-radius: 6px!important;
     float: right;
     padding: 10px;
-    border:1px rgba(128, 128, 128, 0.514) solid;
-    width:90%
+    border: 1px rgba(128, 128, 128, 0.514) solid;
+    width: 100%;
 }
 .personal-details .input-group div {
     display: inline-block;
