@@ -847,7 +847,7 @@ li span{display: none;}
 @media screen and (max-width: 750px) {
 .search-section {
     float: none !important;
-    width: 90%;
+    width: 79vw !important;
     margin-block: 9px;
     margin-inline: 3vw;
 }
@@ -887,7 +887,8 @@ li span{display: none;}
     padding-top: 0;
 }
 .add-new-teacher {
-    width: 79vw;
+    margin-top: -6px;
+    margin-inline: auto;
 }
  .grid-container{padding:20px}
 tr > td:nth-child(2){display: none;}
