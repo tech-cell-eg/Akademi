@@ -44,16 +44,19 @@ h5 {
     font-size: 11px;
 }
 .buttons .icon{    position: absolute;
-    right: 17px;
+    right: 6vw;
     top: 17px;}
     .buttons button svg {
      width: 20px;
     height:20px }
     .admin{padding-top: 17px;}
 
-    .tsidetags{padding-top: 10px;
+.tsidetags {
+    padding-top: 10px;
     width: 20%;
-    float: right;}
+    float: right;
+    margin-inline-end: 6vw;
+}
 
  .add-new-teacher {
     margin-right: 13px;
@@ -140,13 +143,13 @@ li{cursor:pointer}
   margin: 50px;
 }
 .search-section {
-  margin: 50px;
-
   width: 350;
   height: 60;
   top: 50px;
   border-radius: 40px;
   padding: 16.5px;
+    margin-block: 0px;
+    margin-inline: 5vw;
 }
 input {
   border: 0;
@@ -434,8 +437,10 @@ padding-top :40px;
 margin:20px;
 display: inline-block;}
 
-.teacher_h2,h2{margin:25px;
 
+.teacher_h2, h2 {
+    margin: 30px;
+    margin-inline-start: 5vw;
 }
 .teacher_icon{width:50px;
 height:50px;
