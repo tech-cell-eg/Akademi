@@ -47,14 +47,19 @@ h5 {
     position: relative;
 }
 .admin h5{font-size:16px}
-.admin p{font-size:13px}
+.admin p {
+
+    font-size: 13px;
+}
 .buttons .icon {
     position: absolute;
-    right: 5px;
-    top: 17px;
+    right: 0px;
+    top: 0px;
 }
-    .admin{padding-top: 17px;
-          position:relative;}
+.admin {
+    padding-top: 10px;
+    position: relative;
+}
 
 .tsidetags {
     padding-top: 10px;
@@ -423,10 +428,10 @@ td {
 }
 /***************************inner side***********************************/
 .dashboard-inner-side {
-  width: 20vw;
-  height: 100vh;
-  padding: 10px;
-  background-color: white;
+    width: 22vw;
+    height: 100vh;
+    padding: 10px;
+    background-color: white;
 }
 /******************************teacher*******************************************/
 
