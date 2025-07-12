@@ -43,13 +43,13 @@ h5 {
    
     font-size: 11px;
 }
-.buttons .icon{    position: absolute;
-    right: 6vw;
-    top: 17px;}
-    .buttons button svg {
-     width: 20px;
-    height:20px }
-    .admin{padding-top: 17px;}
+.buttons .icon {
+    position: absolute;
+    right: 5px;
+    top: 17px;
+}
+    .admin{padding-top: 17px;
+          position:relative;}
 
 .tsidetags {
     padding-top: 10px;
