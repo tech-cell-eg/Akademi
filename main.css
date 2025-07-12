@@ -737,7 +737,7 @@ aside{width:25vw}
 {left:21vw}
 
 /***teacher***/
-.teacher_card{width:28vw}
+.teacher_card{width:32vw}
 .teacher-details {
     width: 52vw;
     margin-left: 5vw;
@@ -757,9 +757,15 @@ aside{width:25vw}
     width: 20%;
     float: right;
     font-size: 14px;
+    margin-inline-end: 4vw;
 }
 .buttons .icon {
-    width: 80px;}
+    
+    display: none;
+}
+  .add-new-teacher {
+    margin-block: -2vh;
+}
     .food-list-container {
     background: white;
     width: 86%;
@@ -804,7 +810,12 @@ margin-left: 7vw !important;}
     padding: 6px;
     height: 6vw;
     width: 6vw;
-}}
+}
+.teacher_card {
+    width: 30vw;
+}
+
+}
 @media screen and (max-width: 816px) {
   .search-section {
   
@@ -913,9 +924,16 @@ h1{display: none;}
     width: 79vw;
     margin-top: 18vh;
     margin-right: 5vw;
+    margin-inline: auto;
+    margin-block: -2vh;
+    width: 82vw;
 }
-.search-section{width: 91% !important;
-margin-inline: 2vw;}
+}
+.search-section {
+    width: 82vw !important;
+    margin-inline: 2vw;
+    margin-top: 16vh;
+}
     .tsidetags {
         width: 34%;
     }
