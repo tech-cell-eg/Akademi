@@ -2228,40 +2228,51 @@ document.querySelector(".add-new-teacher").addEventListener("click", () => {
 
       <div class="personal-details">
         <h4>Personal Details</h4>
-        <div class="input-group">
+        <div class="form-row">
+        <div class="form-group">
           <label>First Name *</label>
-          <input type="text" id="teacher-firstname" placeholder="Maria" />
+          <input type="text" placeholder="Enter first name" value="Maria" />
         </div>
-        <div class="input-group">
+        <div class="form-group">
           <label>Last Name *</label>
-          <input type="text" id="teacher-lastname" placeholder="Historia" />
+          <input type="text" placeholder="Enter last name" value="Historia" />
         </div>
-        <div class="input-group">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
           <label>Email *</label>
-          <input type="email" id="teacher-email" placeholder="Historia@mail.com" />
+          <input type="email" placeholder="Enter email" value="Historia@gmail.com" />
         </div>
-        <div class="input-group">
+        <div class="form-group">
           <label>Phone *</label>
-          <input type="text" id="teacher-phone" placeholder="+1234567890" />
+          <input type="text" placeholder="Enter phone number" value="+1234567890" />
         </div>
-        <div class="input-group">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
           <label>Address *</label>
-          <textarea id="teacher-address" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."></textarea>
+          <textarea placeholder="Enter address...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+          <div class="address-note">0/2000</div>
         </div>
-        <div class="input-group">
+        <div class="form-group photo-upload">
           <label>Photo *</label>
-          <div style="border: 1px dashed #ccc; padding: 10px; text-align: center;">
-            Drag and drop or <strong>click here</strong> to select file
-          </div>
-      
+          <label class="upload-label" for="photo-upload">
+             Drag and drop or click here to select file
+          </label>
+          <input type="file" id="photo-upload" />
         </div>
-        <div class="input-group">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
           <label>Date of Birth *</label>
-          <input type="text" id="teacher-dob" placeholder="24 February 1997" />
+          <input type="text" value="24 February 1997" />
         </div>
-        <div class="input-group">
+        <div class="form-group">
           <label>Place of Birth *</label>
-          <input type="text" id="teacher-birthplace" placeholder="Jakarta, Indonesia" />
+          <input type="text" value="Jakarta, Indonesia" />
         </div>
       </div>
 
