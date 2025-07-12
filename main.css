@@ -46,6 +46,8 @@ h5 {
     padding-top: 11px;
     position: relative;
 }
+.admin h2{font-side:10px}
+.admin p{font-size:7px}
 .buttons .icon {
     position: absolute;
     right: 5px;
