@@ -2012,7 +2012,7 @@ function renderTeachersList(){ document
     for (let i = start; i < end && i < teachers.length; i++) {
       html += `
       <div class="teacher_card" data-index="${i}">
-        <img class="teacher_icon" src="../assets/27096492_0.webp"></img>
+        <img class="teacher_icon" src="../assets/Screenshot 2025-07-13 033910.png"></img>
 
         <p class="teacher-name">${teachers[i].name}</p>
         <p class="teacher-field">${teachers[i].field}</p>
