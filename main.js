@@ -2196,6 +2196,7 @@ March 20, 2021
 
 document.querySelector(".add-new-teacher").addEventListener("click", () => {
   view.innerHTML = `
+  <div class="add-new-teacher">
   <div class="tsidetags">
   <div class="buttons d-inline w-25">
     <button>
@@ -2223,87 +2224,89 @@ document.querySelector(".add-new-teacher").addEventListener("click", () => {
     </div>
   </div>
 </div>
-    <div id="add-teacher-form" style="margin-top:20px;">
-      <h3>Add New Teacher</h3>
+</div>
+   <div id="add-teacher-form" class="add-teacher-form">
+  <h3>Add New Teacher</h3>
 
-      <div class="personal-details">
-        <h4>Personal Details</h4>
-        <div class="form-row">
-        <div class="form-group">
-          <label>First Name *</label>
-          <input type="text" placeholder="Enter first name" value="Maria" />
-        </div>
-        <div class="form-group">
-          <label>Last Name *</label>
-          <input type="text" placeholder="Enter last name" value="Historia" />
-        </div>
+  <div class="personal-details add-new-teacher">
+    <h4>Personal Details</h4>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name *</label>
+        <input type="text" placeholder="Maria" />
       </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Email *</label>
-          <input type="email" placeholder="Enter email" value="Historia@gmail.com" />
-        </div>
-        <div class="form-group">
-          <label>Phone *</label>
-          <input type="text" placeholder="Enter phone number" value="+1234567890" />
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Address *</label>
-          <textarea placeholder="Enter address...">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
-          <div class="address-note">0/2000</div>
-        </div>
-        <div class="form-group photo-upload">
-          <label>Photo *</label>
-          <label class="upload-label" for="photo-upload">
-             Drag and drop or click here to select file
-          </label>
-          <input type="file" id="photo-upload" />
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Date of Birth *</label>
-          <input type="text" value="24 February 1997" />
-        </div>
-        <div class="form-group">
-          <label>Place of Birth *</label>
-          <input type="text" value="Jakarta, Indonesia" />
-        </div>
-      </div>
-
-      <div class="education-details" style="margin-top: 30px;">
-        <h4>Education</h4>
-        <div class="input-group">
-          <label>University *</label>
-          <input type="text" id="teacher-university" placeholder="University Akademi Historia" />
-        </div>
-        <div class="input-group">
-          <label>Degree *</label>
-          <input type="text" id="teacher-degree" placeholder="History Major" />
-        </div>
-        <div class="input-group">
-          <label>Start & End Date *</label>
-          <div style="display: flex; gap: 10px;">
-            <input type="text" id="teacher-start" placeholder="September 2013" />
-            <input type="text" id="teacher-end" placeholder="September 2017" />
-          </div>
-        </div>
-        <div class="input-group">
-          <label>City *</label>
-          <input type="text" id="teacher-city" placeholder="Yogyakarta, Indonesia" />
-        </div>
-      </div>
-
-      <div style="margin-top: 20px;">
-
-        <button class="btn btn-primary" id="submit-teacher">Submit</button>
+      <div class="form-group">
+        <label>Last Name *</label>
+        <input type="text" placeholder="Historia" />
       </div>
     </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" placeholder="Historia@gmail.com" />
+      </div>
+      <div class="form-group">
+        <label>Phone *</label>
+        <input type="text" placeholder="+1234567890" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Address *</label>
+        <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></textarea>
+        <div class="address-note">0/2000</div>
+      </div>
+      <div class="form-group photo-upload">
+        <label>Photo *</label>
+        <label class="upload-label" for="photo-upload">
+           Drag and drop or click here to select file
+        </label>
+        <input type="file" id="photo-upload" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Date of Birth *</label>
+        <input type="text"  placeholder="24 February 1997" />
+      </div>
+      <div class="form-group">
+        <label>Place of Birth *</label>
+        <input type="text"  placeholder="Jakarta, Indonesia" />
+      </div>
+    </div>
+  </div>
+
+  <div class="education-details add-new-teacher">
+    <h4>Education Details</h4>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>University *</label>
+        <input type="text" placeholder="Enter university name" />
+      </div>
+      <div class="form-group">
+        <label>Degree *</label>
+        <input type="text" placeholder="Enter degree" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Field of Study *</label>
+        <input type="text" placeholder="e.g., Computer Science" />
+      </div>
+      <div class="form-group">
+        <label>Graduation Year *</label>
+        <input type="text" placeholder="e.g., 2022" />
+      </div>
+    </div>
+  </div>
+</div>
+
   `;
 
   document.getElementById("submit-teacher").addEventListener("click", submitNewTeacher);
